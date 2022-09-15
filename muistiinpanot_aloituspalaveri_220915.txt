@@ -1,0 +1,16 @@
+15.9.2022 klo 18.20
+Paikalla: Valtteri Peltoluhta, Panu Käppi, Matti Tontti
+
+Projektin aihe: Budjettilaskuri
+Wpf-sovellus
+
+Työnjakoa:
+Valtteri tekee UML-Diagrammin
+Matti tekee GitHubiin repositoryn
+Panu kirjoittaa muistiinpanot tältä kokouselta
+Panu aloittaa vaatimusmäärittelyn tekemisen
+
+Scrum sprintit viikon pituisia, vähintään kaksi kokousta sprintissä, aloitus ja lopetus
+
+
+Jatketaan maanantaina 19.9
