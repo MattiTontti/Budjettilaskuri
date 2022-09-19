@@ -1,0 +1,13 @@
+19.9.2022 klo 10.20
+Paikalla: Valtteri Peltoluhta, Panu Käppi, Matti Tontti etänä
+
+Edellisen kokouksessa päätetty työnjako suoritettu.
+
+Työnjakoa:
+Valtteri kirjoittaa muistiinpanot tältä kokoukselta
+Valtteri jatkaa vaatimusmäärittelyn tekemistä
+Matti pääsivun visualisointi
+Panu classien rakentaminen ja json tietokannan tutkiminen
+
+21.9 daily
+26.9 rewiew
