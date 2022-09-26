@@ -6,18 +6,12 @@ using System.Threading.Tasks;
 
 namespace Budjettilaskuri
 {
-    internal class Meno
+    internal class Meno : Raha
     {
-        public string Nimi { get; set; }
-        public double Määrä { get; set; }
         public Meno(string nimi, double määrä)
         {
             Nimi = nimi;
             Määrä = määrä;
-        }
-        public override string? ToString()
-        {
-            return $"{Nimi}: {Määrä:f2} €";
         }
     }
 }
