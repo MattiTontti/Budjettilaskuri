@@ -1,24 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\matti\\source\\repos\\Pääsivu\\Pääsivu\\Pääsivu.csproj": {}
+    "C:\\Users\\vpelt\\Desktop\\Projekti\\Budjettilaskuri\\Pääsivu\\Pääsivu\\Pääsivu.csproj": {}
   },
   "projects": {
-    "C:\\Users\\matti\\source\\repos\\Pääsivu\\Pääsivu\\Pääsivu.csproj": {
+    "C:\\Users\\vpelt\\Desktop\\Projekti\\Budjettilaskuri\\Pääsivu\\Pääsivu\\Pääsivu.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\matti\\source\\repos\\Pääsivu\\Pääsivu\\Pääsivu.csproj",
+        "projectUniqueName": "C:\\Users\\vpelt\\Desktop\\Projekti\\Budjettilaskuri\\Pääsivu\\Pääsivu\\Pääsivu.csproj",
         "projectName": "Pääsivu",
-        "projectPath": "C:\\Users\\matti\\source\\repos\\Pääsivu\\Pääsivu\\Pääsivu.csproj",
-        "packagesPath": "C:\\Users\\matti\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\matti\\source\\repos\\Pääsivu\\Pääsivu\\obj\\",
+        "projectPath": "C:\\Users\\vpelt\\Desktop\\Projekti\\Budjettilaskuri\\Pääsivu\\Pääsivu\\Pääsivu.csproj",
+        "packagesPath": "C:\\Users\\vpelt\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\vpelt\\Desktop\\Projekti\\Budjettilaskuri\\Pääsivu\\Pääsivu\\obj\\",
         "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
-        ],
         "configFilePaths": [
-          "C:\\Users\\matti\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Users\\vpelt\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -62,7 +58,7 @@
               "privateAssets": "none"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.400\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.401\\RuntimeIdentifierGraph.json"
         }
       }
     }
