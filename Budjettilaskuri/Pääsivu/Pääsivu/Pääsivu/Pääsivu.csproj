@@ -1,0 +1,24 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net6.0-windows</TargetFramework>
+    <Nullable>enable</Nullable>
+    <UseWPF>true</UseWPF>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="495303.jpg" />
+    <None Remove="landscape.jpg" />
+    <None Remove="landscapee.jpg" />
+    <None Remove="technology-data-binary-code-network-conveying-connectivity_34629-796.jpg" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="495303.jpg" />
+    <Resource Include="landscape.jpg" />
+    <Resource Include="landscapee.jpg" />
+    <Resource Include="technology-data-binary-code-network-conveying-connectivity_34629-796.jpg" />
+  </ItemGroup>
+
+</Project>
