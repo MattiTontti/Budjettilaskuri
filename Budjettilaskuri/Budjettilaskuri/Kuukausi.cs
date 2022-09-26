@@ -10,9 +10,9 @@ namespace Budjettilaskuri
 
     internal class Kuukausi
     {
-        public List<Meno> Menot = new List<Meno>();
-        public List<Tulo> Tulot = new List<Tulo>();
-        internal string Nimi { get; }
+        public List<Meno> Menot { get; set; } = new List<Meno>();
+        public List<Tulo> Tulot { get; set; } = new List<Tulo>();
+        internal string Nimi { get; set; }
         public Kuukausi(int numero)
         {
             switch (numero)
