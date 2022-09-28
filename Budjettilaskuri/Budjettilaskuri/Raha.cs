@@ -11,6 +11,12 @@ namespace Budjettilaskuri
         public string Nimi { get; set; } = "";
         public double Määrä { get; set; }
 
+        public Raha(string nimi, double määrä)
+        {
+            Nimi = nimi;
+            Määrä = määrä;
+        }
+
         public override string? ToString()
         {
             return $"{Nimi}: {Määrä:f2} €";

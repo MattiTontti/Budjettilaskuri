@@ -8,10 +8,6 @@ namespace Budjettilaskuri
 {
     internal class Meno : Raha
     {
-        public Meno(string nimi, double määrä)
-        {
-            Nimi = nimi;
-            Määrä = määrä;
-        }
+        public Meno(string nimi, double määrä) : base(nimi, määrä) { }
     }
 }

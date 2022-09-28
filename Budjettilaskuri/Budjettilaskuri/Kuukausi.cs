@@ -12,7 +12,7 @@ namespace Budjettilaskuri
     {
         public List<Meno> Menot { get; set; } = new List<Meno>();
         public List<Tulo> Tulot { get; set; } = new List<Tulo>();
-        internal string Nimi { get; set; }
+        public string Nimi { get; set; }
         public Kuukausi(int numero)
         {
             switch (numero)
