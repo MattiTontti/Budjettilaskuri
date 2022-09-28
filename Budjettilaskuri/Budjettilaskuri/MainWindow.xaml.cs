@@ -23,7 +23,7 @@ namespace Budjettilaskuri
     /// </summary>
     public partial class MainWindow : Window
     {
-        Vuosi vuosi = new Vuosi(2022);
+        Vuosi vuosi = new Vuosi();
         public MainWindow()
         {
             InitializeComponent();
@@ -31,8 +31,10 @@ namespace Budjettilaskuri
             {
                 vuosi = JsonSerializer.Deserialize<Vuosi>(File.ReadAllText("vuosi.json"));
             }
+
             vuosi.NykyKuukausi().MuokkaaMeno("Vuokra / laina", 500);
             vuosi.NykyKuukausi().LisääMeno("Muut menot", 900);
+
             MessageBox.Show(vuosi.KokoMenot().ToString());  
             /*
             menotKk.Text = vuosi.NykyKuukausi().KokoMenot() + " €";
@@ -46,7 +48,7 @@ namespace Budjettilaskuri
 
         private void Window_Closing(object sender, System.ComponentModel.CancelEventArgs e)
         {
-            string jsonString = JsonSerializer.Serialize<Vuosi>(vuosi);
+            string jsonString = JsonSerializer.Serialize(vuosi);
             File.WriteAllText("vuosi.json", jsonString);
         }
     }

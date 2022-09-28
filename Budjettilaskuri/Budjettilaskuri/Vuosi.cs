@@ -2,18 +2,29 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Text.Json.Serialization;
 using System.Threading.Tasks;
 
 namespace Budjettilaskuri
 {
-    internal class Vuosi
+    public class Vuosi
     {
         public int Numero { get; set; }
         public List<Kuukausi> Kuukaudet { get; set; }
-        DateTime dt = DateTime.Now;
-        public Vuosi(int num)
+        public DateTime dt = DateTime.Now;
+        public Vuosi()
         {
-            Numero = num;
+            Numero = 2022;
+            Kuukaudet = new List<Kuukausi>();
+            for (int i = 0; i < 12; i++)
+            {
+                Kuukaudet.Add(new Kuukausi(i + 1));
+            }
+        }
+
+        public Vuosi(int numero)
+        {
+            Numero = numero;
             Kuukaudet = new List<Kuukausi>();
             for (int i = 0; i < 12; i++)
             {

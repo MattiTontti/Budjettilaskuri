@@ -10,7 +10,10 @@ namespace Budjettilaskuri
     {
         public string Nimi { get; set; } = "";
         public double Määrä { get; set; }
+        public Raha()
+        {
 
+        }
         public Raha(string nimi, double määrä)
         {
             Nimi = nimi;

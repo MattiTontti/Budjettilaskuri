@@ -13,6 +13,10 @@ namespace Budjettilaskuri
         public List<Meno> Menot { get; set; } = new List<Meno>();
         public List<Tulo> Tulot { get; set; } = new List<Tulo>();
         public string Nimi { get; set; }
+        public Kuukausi()
+        {
+
+        }
         public Kuukausi(int numero)
         {
             switch (numero)
