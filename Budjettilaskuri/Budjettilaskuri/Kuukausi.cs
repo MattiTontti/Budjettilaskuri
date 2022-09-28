@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 namespace Budjettilaskuri
 {
 
-    internal class Kuukausi
+    public class Kuukausi
     {
         public List<Meno> Menot { get; set; } = new List<Meno>();
         public List<Tulo> Tulot { get; set; } = new List<Tulo>();
@@ -31,7 +31,16 @@ namespace Budjettilaskuri
                 case 12: Nimi = "joulukuu"; break;
                 default: Nimi = ""; break;
             }
-
+            Meno vuokralaina = new Meno("Vuokra / laina", 0);
+            LisääMeno(vuokralaina);
+            Meno sähkö = new Meno("Sähkö", 0);
+            LisääMeno(sähkö);
+            Meno vesi = new Meno("Vesi", 0);
+            LisääMeno(vesi);
+            Meno ruoka = new Meno("Ruoka", 0);
+            LisääMeno(ruoka);
+            Meno matkakulut = new Meno("Matkakulut", 0);
+            LisääMeno(matkakulut);
         }
         /// <summary>
         /// Laskee kuukauden menot
@@ -82,6 +91,38 @@ namespace Budjettilaskuri
         internal double Erotus()
         {
             return KokoTulot() - KokoMenot();
+        }
+        /// <summary>
+        /// Muokkaa meno
+        /// </summary>
+        /// <param name="meno"></param>
+        /// <param name="määrä"></param>
+        internal void MuokkaaMeno(string meno, int määrä)
+        {
+            foreach (Meno m in Menot)
+            {
+                if (m.Nimi == meno)
+                {
+                    m.Määrä = määrä;
+                    break;
+                }
+            }
+        }
+        /// <summary>
+        /// Muokkaa tulo
+        /// </summary>
+        /// <param name="tulo"></param>
+        /// <param name="määrä"></param>
+        internal void MuokkaaTulo(string tulo, int määrä)
+        {
+            foreach (Tulo t in Tulot)
+            {
+                if (t.Nimi == tulo)
+                {
+                    t.Määrä = määrä;
+                    break;
+                }
+            }
         }
     }
 }

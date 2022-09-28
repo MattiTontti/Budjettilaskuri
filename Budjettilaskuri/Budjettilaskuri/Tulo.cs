@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Budjettilaskuri
 {
-    internal class Tulo : Raha
+    public class Tulo : Raha
     {
         public Tulo(string nimi, double määrä) : base(nimi, määrä) { }
     }

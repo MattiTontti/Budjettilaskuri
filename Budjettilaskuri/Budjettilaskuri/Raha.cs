@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Budjettilaskuri
 {
-    internal class Raha
+    public class Raha
     {
         public string Nimi { get; set; } = "";
         public double Määrä { get; set; }

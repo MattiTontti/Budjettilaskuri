@@ -19,3 +19,5 @@ C:\Users\panuk\Desktop\Budjettilaskuri\Budjettilaskuri\Budjettilaskuri\obj\Debug
 C:\Users\panuk\Desktop\Budjettilaskuri\Budjettilaskuri\Budjettilaskuri\obj\Debug\net6.0-windows\Budjettilaskuri.pdb
 C:\Users\panuk\Desktop\Budjettilaskuri\Budjettilaskuri\Budjettilaskuri\obj\Debug\net6.0-windows\Budjettilaskuri.genruntimeconfig.cache
 C:\Users\panuk\Desktop\Budjettilaskuri\Budjettilaskuri\Budjettilaskuri\obj\Debug\net6.0-windows\ref\Budjettilaskuri.dll
+C:\Users\panuk\Desktop\Budjettilaskuri\Budjettilaskuri\Budjettilaskuri\obj\Debug\net6.0-windows\KuukausiWindow.g.cs
+C:\Users\panuk\Desktop\Budjettilaskuri\Budjettilaskuri\Budjettilaskuri\obj\Debug\net6.0-windows\KuukausiWindow.baml
