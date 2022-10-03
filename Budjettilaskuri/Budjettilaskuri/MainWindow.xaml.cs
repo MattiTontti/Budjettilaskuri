@@ -31,8 +31,6 @@ namespace Budjettilaskuri
             {
                 vuosi = JsonSerializer.Deserialize<Vuosi>(File.ReadAllText("vuosi.json"));
             }
-
-            vuosi.NykyKuukausi().MuokkaaMeno("Vuokra / laina", 500);
             Kuukausi_Check();
         }
 

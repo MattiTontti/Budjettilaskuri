@@ -64,6 +64,10 @@ namespace Budjettilaskuri
             {
                 kuukausi.MuokkaaMeno(comboBox.SelectedItem.ToString(), määrä);
             }
+            if (toistuvaCheck.IsChecked == true)
+            {
+                MainWindow.vuosi.ToistuvaMeno((Meno)comboBox.SelectedItem);
+            }
         }
 
         private void lisääMeno_Click(object sender, RoutedEventArgs e)
@@ -92,6 +96,10 @@ namespace Budjettilaskuri
             if (double.TryParse(tulotBox.Text, out määrä))
             {
                 kuukausi.MuokkaaTulo(comboBox2.SelectedItem.ToString(), määrä);
+            }
+            if (toistuvaCheck2.IsChecked == true)
+            {
+                MainWindow.vuosi.ToistuvaTulo((Tulo)comboBox.SelectedItem);
             }
         }
 

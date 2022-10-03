@@ -13,5 +13,19 @@ namespace Budjettilaskuri
         {
 
         }
+        public void OlemassaCheck(Vuosi vuosi)
+        {
+            foreach (Kuukausi kk in vuosi.Kuukaudet)
+            {
+                if (kk.OnkoMeno(this.Nimi))
+                {
+                    Olemassa.Add(true);
+                }
+                else
+                {
+                    Olemassa.Add(false);
+                }
+            }
+        }
     }
 }

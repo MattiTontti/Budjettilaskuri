@@ -15,7 +15,7 @@ using System.Windows.Shapes;
 namespace Budjettilaskuri
 {
     /// <summary>
-    /// Interaction logic for LisääIkkuna.xaml
+    /// Interaction logic for LisääWindow.xaml
     /// </summary>
     public partial class LisääWindow : Window
     {
