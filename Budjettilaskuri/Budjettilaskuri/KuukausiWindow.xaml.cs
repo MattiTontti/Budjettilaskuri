@@ -24,6 +24,18 @@ namespace Budjettilaskuri
         {
             InitializeComponent();
             Title = kk.Nimi;
+            comboBox.ItemsSource = kk.Menot;
+            comboBox2.ItemsSource = kk.Tulot;
+        }
+
+        private void comboBox_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            menotBox.Text = (comboBox.SelectedItem as Meno).Määrä.ToString();
+        }
+
+        private void comboBox2_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            menotBox.Text = (comboBox.SelectedItem as Tulo).Määrä.ToString();
         }
     }
 }

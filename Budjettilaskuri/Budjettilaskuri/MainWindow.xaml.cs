@@ -48,5 +48,41 @@ namespace Budjettilaskuri
             string jsonString = JsonSerializer.Serialize(vuosi);
             File.WriteAllText("vuosi.json", jsonString);
         }
+
+        private void KK_Click(object sender, RoutedEventArgs e)
+        {
+            int num = -1;
+            switch((sender as Button).Content)
+            {
+                case "Tammikuu":
+                    num = 0; break;
+                case "Helmikuu":
+                    num = 1; break;
+                case "Maaliskuu":
+                    num = 2; break;
+                case "Huhtikuu":
+                    num = 3; break;
+                case "Toukokuu":
+                    num = 4; break;
+                case "Kesäkuu":
+                    num = 5; break;
+                case "Heinäkuu":
+                    num = 6; break;
+                case "Elokuu":
+                    num = 7; break;
+                case "Syyskuu":
+                    num = 8; break;
+                case "Lokakuu":
+                    num = 9; break;
+                case "Marraskuu":
+                    num = 10; break;
+                case "Joulukuu":
+                    num = 11; break;
+
+            }
+
+            KuukausiWindow kkwindow = new KuukausiWindow(vuosi.Kuukaudet[num]);
+            kkwindow.Show();
+        }
     }
 }

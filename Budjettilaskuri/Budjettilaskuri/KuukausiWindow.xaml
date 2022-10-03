@@ -7,6 +7,14 @@
         mc:Ignorable="d"
         Title="KuukausiWindow" Height="450" Width="800">
     <Grid>
-        
+        <ComboBox x:Name="comboBox" HorizontalAlignment="Left" Margin="246,178,0,0" VerticalAlignment="Top" Width="120" SelectionChanged="comboBox_SelectionChanged"/>
+        <TextBox x:Name="menotBox" HorizontalAlignment="Left" Margin="413,180,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="57"/>
+        <Label Content="€" HorizontalAlignment="Left" Margin="475,176,0,0" VerticalAlignment="Top"/>
+        <Label Content="Menot:" HorizontalAlignment="Left" Margin="246,152,0,0" VerticalAlignment="Top"/>
+        <ComboBox x:Name="comboBox2" HorizontalAlignment="Left" Margin="246,243,0,0" VerticalAlignment="Top" Width="120" SelectionChanged="comboBox2_SelectionChanged"/>
+        <TextBox x:Name="tulotBox" HorizontalAlignment="Left" Margin="413,245,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="57"/>
+        <Label Content="€" HorizontalAlignment="Left" Margin="475,241,0,0" VerticalAlignment="Top"/>
+        <Label Content="Tulot:" HorizontalAlignment="Left" Margin="246,217,0,0" VerticalAlignment="Top"/>
+
     </Grid>
 </Window>

@@ -21,18 +21,18 @@ namespace Budjettilaskuri
         {
             switch (numero)
             {
-                case 1: Nimi = "tammikuu"; break;
-                case 2: Nimi = "helmikuu"; break;
-                case 3: Nimi = "maaliskuu"; break;
-                case 4: Nimi = "huhtikuu"; break;
-                case 5: Nimi = "toukokuu"; break;
-                case 6: Nimi = "kesäkuu"; break;
-                case 7: Nimi = "heinäkuu"; break;
-                case 8: Nimi = "elokuu"; break;
-                case 9: Nimi = "syyskuu"; break;
-                case 10: Nimi = "lokakuu"; break;
-                case 11: Nimi = "marraskuu"; break;
-                case 12: Nimi = "joulukuu"; break;
+                case 1: Nimi = "Tammikuu"; break;
+                case 2: Nimi = "Helmikuu"; break;
+                case 3: Nimi = "Maaliskuu"; break;
+                case 4: Nimi = "Huhtikuu"; break;
+                case 5: Nimi = "Toukokuu"; break;
+                case 6: Nimi = "Kesäkuu"; break;
+                case 7: Nimi = "Heinäkuu"; break;
+                case 8: Nimi = "Elokuu"; break;
+                case 9: Nimi = "Syyskuu"; break;
+                case 10: Nimi = "Lokakuu"; break;
+                case 11: Nimi = "Marraskuu"; break;
+                case 12: Nimi = "Joulukuu"; break;
                 default: Nimi = ""; break;
             }
             Meno vuokralaina = new Meno("Vuokra / laina", 0);

@@ -22,7 +22,7 @@ namespace Budjettilaskuri
 
         public override string? ToString()
         {
-            return $"{Nimi}: {Määrä:f2} €";
+            return Nimi;
         }
     }
 }
