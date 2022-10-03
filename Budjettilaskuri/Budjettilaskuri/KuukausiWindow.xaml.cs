@@ -27,8 +27,11 @@ namespace Budjettilaskuri
             kuukausi = kk;
             InitializeComponent();
             Title = kk.Nimi;
+            kuukausiNimi.Text = kk.Nimi;
             comboBox.ItemsSource = kuukausi.Menot;
             comboBox2.ItemsSource = kuukausi.Tulot;
+            kokoMenot.Text = kuukausi.KokoMenot().ToString() + " €";
+            kokoTulot.Text = kuukausi.KokoTulot().ToString() + " €";
         }
 
         private void comboBox_SelectionChanged(object sender, SelectionChangedEventArgs e)
@@ -68,8 +71,9 @@ namespace Budjettilaskuri
             {
                 MainWindow.vuosi.ToistuvaMeno((Meno)comboBox.SelectedItem);
             }
+            kokoMenot.Text = kuukausi.KokoMenot().ToString() + " €";
         }
-
+        public bool addcheck = false;
         private void lisääMeno_Click(object sender, RoutedEventArgs e)
         {
             LisääWindow window = new LisääWindow(kuukausi, 0);
@@ -77,6 +81,7 @@ namespace Budjettilaskuri
             if (window.bcheck)
             {
                 kuukausi.LisääMeno(window.meno);
+                comboBox.SelectedIndex = kuukausi.Menot.Count - 1;
             }
         }
 
@@ -87,6 +92,7 @@ namespace Budjettilaskuri
             if (window.bcheck)
             {
                 kuukausi.LisääTulo(window.tulo);
+                comboBox2.SelectedIndex = kuukausi.Tulot.Count - 1;
             }
         }
 
@@ -101,6 +107,7 @@ namespace Budjettilaskuri
             {
                 MainWindow.vuosi.ToistuvaTulo((Tulo)comboBox.SelectedItem);
             }
+            kokoTulot.Text = kuukausi.KokoTulot().ToString() + " €";
         }
 
         private void toistuvaCheck_Checked(object sender, RoutedEventArgs e)
@@ -121,6 +128,28 @@ namespace Budjettilaskuri
         private void toistuvaCheck2_Unchecked(object sender, RoutedEventArgs e)
         {
             MainWindow.vuosi.EiToistuvaTulo((Tulo)comboBox.SelectedItem, MainWindow.vuosi.Kuukaudet[MainWindow.vuosi.Kuukaudet.IndexOf(MainWindow.vuosi.HaeKuukausi(kuukausi.Nimi))]);
+        }
+
+        private void poistaMeno(object sender, RoutedEventArgs e)
+        {
+            var m = MessageBox.Show("Poista meno?", "Poista meno", MessageBoxButton.YesNo);
+            if (m == MessageBoxResult.Yes)
+            {
+                kuukausi.Menot.Remove((Meno)comboBox.SelectedItem);
+                comboBox.SelectedIndex += 1;
+                comboBox.SelectedIndex -= 1;
+            }
+        }
+
+        private void poistaTulo(object sender, RoutedEventArgs e)
+        {
+            var m = MessageBox.Show("Poista tulo?", "Poista tulo", MessageBoxButton.YesNo);
+            if (m == MessageBoxResult.Yes)
+            {
+                kuukausi.Tulot.Remove((Tulo)comboBox2.SelectedItem);
+                comboBox2.SelectedIndex += 1;
+                comboBox2.SelectedIndex -= 1;
+            }
         }
     }
 }

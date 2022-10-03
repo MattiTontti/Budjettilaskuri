@@ -143,10 +143,6 @@ namespace Budjettilaskuri
                     else
                     {
                         Kuukaudet[i].Menot[Kuukaudet[i].Menot.IndexOf(Kuukaudet[i].HaeMeno(meno.Nimi))].Toistuva = false;
-                        if (Kuukaudet[i].Nimi != kuukausi.Nimi)
-                        {
-                            Kuukaudet[i].Menot[Kuukaudet[i].Menot.IndexOf(Kuukaudet[i].HaeMeno(meno.Nimi))].Määrä = 0;
-                        }
                     }
                 }
             }
