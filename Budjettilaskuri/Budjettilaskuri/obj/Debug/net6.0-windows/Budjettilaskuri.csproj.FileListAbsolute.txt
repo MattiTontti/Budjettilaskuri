@@ -1,13 +1,15 @@
+C:\Users\panuk\Desktop\Budjettilaskuri\Budjettilaskuri\Budjettilaskuri\obj\Debug\net6.0-windows\Budjettilaskuri.csproj.AssemblyReference.cache
+C:\Users\panuk\Desktop\Budjettilaskuri\Budjettilaskuri\Budjettilaskuri\obj\Debug\net6.0-windows\KuukausiWindow.g.cs
+C:\Users\panuk\Desktop\Budjettilaskuri\Budjettilaskuri\Budjettilaskuri\obj\Debug\net6.0-windows\MainWindow.g.cs
+C:\Users\panuk\Desktop\Budjettilaskuri\Budjettilaskuri\Budjettilaskuri\obj\Debug\net6.0-windows\App.g.cs
+C:\Users\panuk\Desktop\Budjettilaskuri\Budjettilaskuri\Budjettilaskuri\obj\Debug\net6.0-windows\Budjettilaskuri_MarkupCompile.cache
+C:\Users\panuk\Desktop\Budjettilaskuri\Budjettilaskuri\Budjettilaskuri\obj\Debug\net6.0-windows\Budjettilaskuri_MarkupCompile.lref
 C:\Users\panuk\Desktop\Budjettilaskuri\Budjettilaskuri\Budjettilaskuri\bin\Debug\net6.0-windows\Budjettilaskuri.exe
 C:\Users\panuk\Desktop\Budjettilaskuri\Budjettilaskuri\Budjettilaskuri\bin\Debug\net6.0-windows\Budjettilaskuri.deps.json
 C:\Users\panuk\Desktop\Budjettilaskuri\Budjettilaskuri\Budjettilaskuri\bin\Debug\net6.0-windows\Budjettilaskuri.runtimeconfig.json
 C:\Users\panuk\Desktop\Budjettilaskuri\Budjettilaskuri\Budjettilaskuri\bin\Debug\net6.0-windows\Budjettilaskuri.dll
 C:\Users\panuk\Desktop\Budjettilaskuri\Budjettilaskuri\Budjettilaskuri\bin\Debug\net6.0-windows\Budjettilaskuri.pdb
-C:\Users\panuk\Desktop\Budjettilaskuri\Budjettilaskuri\Budjettilaskuri\obj\Debug\net6.0-windows\Budjettilaskuri.csproj.AssemblyReference.cache
-C:\Users\panuk\Desktop\Budjettilaskuri\Budjettilaskuri\Budjettilaskuri\obj\Debug\net6.0-windows\MainWindow.g.cs
-C:\Users\panuk\Desktop\Budjettilaskuri\Budjettilaskuri\Budjettilaskuri\obj\Debug\net6.0-windows\App.g.cs
-C:\Users\panuk\Desktop\Budjettilaskuri\Budjettilaskuri\Budjettilaskuri\obj\Debug\net6.0-windows\Budjettilaskuri_MarkupCompile.cache
-C:\Users\panuk\Desktop\Budjettilaskuri\Budjettilaskuri\Budjettilaskuri\obj\Debug\net6.0-windows\Budjettilaskuri_MarkupCompile.lref
+C:\Users\panuk\Desktop\Budjettilaskuri\Budjettilaskuri\Budjettilaskuri\obj\Debug\net6.0-windows\KuukausiWindow.baml
 C:\Users\panuk\Desktop\Budjettilaskuri\Budjettilaskuri\Budjettilaskuri\obj\Debug\net6.0-windows\MainWindow.baml
 C:\Users\panuk\Desktop\Budjettilaskuri\Budjettilaskuri\Budjettilaskuri\obj\Debug\net6.0-windows\Budjettilaskuri.g.resources
 C:\Users\panuk\Desktop\Budjettilaskuri\Budjettilaskuri\Budjettilaskuri\obj\Debug\net6.0-windows\Budjettilaskuri.GeneratedMSBuildEditorConfig.editorconfig
@@ -19,5 +21,3 @@ C:\Users\panuk\Desktop\Budjettilaskuri\Budjettilaskuri\Budjettilaskuri\obj\Debug
 C:\Users\panuk\Desktop\Budjettilaskuri\Budjettilaskuri\Budjettilaskuri\obj\Debug\net6.0-windows\Budjettilaskuri.pdb
 C:\Users\panuk\Desktop\Budjettilaskuri\Budjettilaskuri\Budjettilaskuri\obj\Debug\net6.0-windows\Budjettilaskuri.genruntimeconfig.cache
 C:\Users\panuk\Desktop\Budjettilaskuri\Budjettilaskuri\Budjettilaskuri\obj\Debug\net6.0-windows\ref\Budjettilaskuri.dll
-C:\Users\panuk\Desktop\Budjettilaskuri\Budjettilaskuri\Budjettilaskuri\obj\Debug\net6.0-windows\KuukausiWindow.g.cs
-C:\Users\panuk\Desktop\Budjettilaskuri\Budjettilaskuri\Budjettilaskuri\obj\Debug\net6.0-windows\KuukausiWindow.baml

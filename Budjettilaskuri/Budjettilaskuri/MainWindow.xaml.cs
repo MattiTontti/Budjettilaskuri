@@ -33,17 +33,14 @@ namespace Budjettilaskuri
             }
 
             vuosi.NykyKuukausi().MuokkaaMeno("Vuokra / laina", 500);
-            vuosi.NykyKuukausi().LisääMeno("Muut menot", 900);
 
-            MessageBox.Show(vuosi.KokoMenot().ToString());  
-            /*
-            menotKk.Text = vuosi.NykyKuukausi().KokoMenot() + " €";
-            tulotKk.Text = vuosi.NykyKuukausi().KokoTulot() + " €";
-            menotEdellinen.Text = vuosi.EdellinenKuukausi().KokoMenot() + " €";
-            tulotEdellinen.Text = vuosi.EdellinenKuukausi().KokoTulot() + " €";
-            menotVuosi.Text = vuosi.KokoMenot() + " €";
-            tulotVuosi.Text = vuosi.KokoTulot() + " €";
-            */
+            menotKK.Text = vuosi.NykyKuukausi().KokoMenot() + " €";
+            tulotKK.Text = vuosi.NykyKuukausi().KokoTulot() + " €";
+            menotEK.Text = vuosi.EdellinenKuukausi().KokoMenot() + " €";
+            tulotEK.Text = vuosi.EdellinenKuukausi().KokoTulot() + " €";
+            menotV.Text = vuosi.KokoMenot() + " €";
+            tulotV.Text = vuosi.KokoTulot() + " €";
+            
         }
 
         private void Window_Closing(object sender, System.ComponentModel.CancelEventArgs e)
