@@ -5,9 +5,15 @@
     <Compile Update="KuukausiWindow.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Update="LisääWindow.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <Page Update="KuukausiWindow.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="LisääWindow.xaml">
       <SubType>Designer</SubType>
     </Page>
   </ItemGroup>

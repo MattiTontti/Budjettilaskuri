@@ -150,5 +150,81 @@ namespace Budjettilaskuri
                 }
             }
         }
+
+        /// <summary>
+        /// Onko tämän niminen meno olemassa
+        /// </summary>
+        /// <param name="meno"></param>
+        /// <returns>true/false</returns>
+        internal bool OnkoMeno(string meno)
+        {
+            bool returnBool = false;
+            foreach (Meno m in Menot)
+            {
+                if (m.Nimi == meno)
+                {
+                    returnBool = true;
+                    break;
+                }
+            }
+            return returnBool;
+        }
+
+        /// <summary>
+        /// Onko tämän niminen tulo olemassa
+        /// </summary>
+        /// <param name="tulo"></param>
+        /// <returns>true/false</returns>
+        internal bool OnkoTulo(string tulo)
+        {
+            bool returnBool = false;
+            foreach (Tulo t in Tulot)
+            {
+                if (t.Nimi == tulo)
+                {
+                    returnBool = true;
+                    break;
+                }
+            }
+            return returnBool;
+        }
+
+        /// <summary>
+        /// Hakee menon
+        /// </summary>
+        /// <param name="meno"></param>
+        /// <returns>Haettu meno</returns>
+        internal Meno HaeMeno(string meno)
+        {
+            Meno returnMeno = new Meno();
+            foreach (Meno m in Menot)
+            {
+                if (m.Nimi == meno)
+                {
+                    returnMeno = m;
+                    break;
+                }
+            }
+            return returnMeno;
+        }
+
+        /// <summary>
+        /// Hakee tulon
+        /// </summary>
+        /// <param name="tulo"></param>
+        /// <returns>Haettu tulo</returns>
+        internal Tulo HaeTulo(string tulo)
+        {
+            Tulo returnTulo = new Tulo();
+            foreach (Tulo t in Tulot)
+            {
+                if (t.Nimi == tulo)
+                {
+                    returnTulo = t;
+                    break;
+                }
+            }
+            return returnTulo;
+        }
     }
 }

@@ -23,7 +23,7 @@ namespace Budjettilaskuri
     /// </summary>
     public partial class MainWindow : Window
     {
-        Vuosi vuosi = new Vuosi();
+        public static Vuosi vuosi = new Vuosi();
         public MainWindow()
         {
             InitializeComponent();
@@ -33,14 +33,17 @@ namespace Budjettilaskuri
             }
 
             vuosi.NykyKuukausi().MuokkaaMeno("Vuokra / laina", 500);
+            Kuukausi_Check();
+        }
 
+        private void Kuukausi_Check()
+        {
             menotKK.Text = vuosi.NykyKuukausi().KokoMenot() + " €";
             tulotKK.Text = vuosi.NykyKuukausi().KokoTulot() + " €";
             menotEK.Text = vuosi.EdellinenKuukausi().KokoMenot() + " €";
             tulotEK.Text = vuosi.EdellinenKuukausi().KokoTulot() + " €";
             menotV.Text = vuosi.KokoMenot() + " €";
             tulotV.Text = vuosi.KokoTulot() + " €";
-            
         }
 
         private void Window_Closing(object sender, System.ComponentModel.CancelEventArgs e)
@@ -82,7 +85,9 @@ namespace Budjettilaskuri
             }
 
             KuukausiWindow kkwindow = new KuukausiWindow(vuosi.Kuukaudet[num]);
-            kkwindow.Show();
+            kkwindow.ShowDialog();
+            vuosi.Kuukaudet[num] = kkwindow.kuukausi;
+            Kuukausi_Check();
         }
     }
 }

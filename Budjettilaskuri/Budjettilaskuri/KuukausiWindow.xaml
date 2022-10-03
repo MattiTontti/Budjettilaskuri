@@ -8,13 +8,17 @@
         Title="KuukausiWindow" Height="450" Width="800">
     <Grid>
         <ComboBox x:Name="comboBox" HorizontalAlignment="Left" Margin="246,178,0,0" VerticalAlignment="Top" Width="120" SelectionChanged="comboBox_SelectionChanged"/>
-        <TextBox x:Name="menotBox" HorizontalAlignment="Left" Margin="413,180,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="57"/>
+        <TextBox x:Name="menotBox" HorizontalAlignment="Left" Margin="413,180,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="57" TextChanged="menotBox_TextChanged"/>
         <Label Content="€" HorizontalAlignment="Left" Margin="475,176,0,0" VerticalAlignment="Top"/>
         <Label Content="Menot:" HorizontalAlignment="Left" Margin="246,152,0,0" VerticalAlignment="Top"/>
         <ComboBox x:Name="comboBox2" HorizontalAlignment="Left" Margin="246,243,0,0" VerticalAlignment="Top" Width="120" SelectionChanged="comboBox2_SelectionChanged"/>
-        <TextBox x:Name="tulotBox" HorizontalAlignment="Left" Margin="413,245,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="57"/>
+        <TextBox x:Name="tulotBox" HorizontalAlignment="Left" Margin="413,245,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="57" TextChanged="tulotBox_TextChanged"/>
         <Label Content="€" HorizontalAlignment="Left" Margin="475,241,0,0" VerticalAlignment="Top"/>
         <Label Content="Tulot:" HorizontalAlignment="Left" Margin="246,217,0,0" VerticalAlignment="Top"/>
+        <Button x:Name="lisääMeno" Content="Lisää meno" HorizontalAlignment="Left" Margin="612,182,0,0" VerticalAlignment="Top" Click="lisääMeno_Click"/>
+        <Button x:Name="lisääTulo" Content="Lisää tulo" HorizontalAlignment="Left" Margin="617,244,0,0" VerticalAlignment="Top" Click="lisääTulo_Click"/>
+        <CheckBox x:Name="toistuvaCheck" Content="Toistuva" HorizontalAlignment="Left" Margin="413,203,0,0" VerticalAlignment="Top" Checked="toistuvaCheck_Checked" Unchecked="toistuvaCheck_Unchecked"/>
+        <CheckBox x:Name="toistuvaCheck2" Content="Toistuva" HorizontalAlignment="Left" Margin="413,267,0,0" VerticalAlignment="Top" Checked="toistuvaCheck2_Checked" Unchecked="toistuvaCheck2_Unchecked"/>
 
     </Grid>
 </Window>
