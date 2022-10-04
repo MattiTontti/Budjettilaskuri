@@ -147,7 +147,7 @@ namespace Budjettilaskuri
 
         private void toistuvaCheck2_Unchecked(object sender, RoutedEventArgs e)
         {
-            MainWindow.vuosi.EiToistuvaTulo((Tulo)comboBox.SelectedItem, MainWindow.vuosi.Kuukaudet[MainWindow.vuosi.Kuukaudet.IndexOf(MainWindow.vuosi.HaeKuukausi(kuukausi.Nimi))]);
+            MainWindow.vuosi.EiToistuvaTulo((Tulo)comboBox2.SelectedItem, MainWindow.vuosi.Kuukaudet[MainWindow.vuosi.Kuukaudet.IndexOf(MainWindow.vuosi.HaeKuukausi(kuukausi.Nimi))]);
         }
 
         private void poistaMeno(object sender, RoutedEventArgs e)
