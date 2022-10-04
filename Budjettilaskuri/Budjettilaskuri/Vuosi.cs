@@ -136,7 +136,7 @@ namespace Budjettilaskuri
             {
                 for (int i = 0; i < 12; i++)
                 {
-                    if (Kuukaudet[i].Nimi != kuukausi.Nimi && meno.Olemassa[i] == false)
+                    if (Kuukaudet[i].Nimi != kuukausi.Nimi && (meno.Olemassa[i] == false || Kuukaudet[i].Menot[Kuukaudet[i].Menot.IndexOf(Kuukaudet[i].HaeMeno(meno.Nimi))].Määrä == 0) && Kuukaudet[i].Menot[Kuukaudet[i].Menot.IndexOf(Kuukaudet[i].HaeMeno(meno.Nimi))].Poistettava == true)
                     {
                         Kuukaudet[i].Menot.RemoveAt(Kuukaudet[i].Menot.IndexOf(Kuukaudet[i].HaeMeno(meno.Nimi)));
                     }
@@ -174,17 +174,13 @@ namespace Budjettilaskuri
                 {
                     for (int i = 0; i < 12; i++)
                     {
-                        if (Kuukaudet[i].Nimi != kuukausi.Nimi && tulo.Olemassa[i] == false)
+                        if (Kuukaudet[i].Nimi != kuukausi.Nimi && (tulo.Olemassa[i] == false || Kuukaudet[i].Tulot[Kuukaudet[i].Tulot.IndexOf(Kuukaudet[i].HaeTulo(tulo.Nimi))].Määrä == 0) && Kuukaudet[i].Tulot[Kuukaudet[i].Tulot.IndexOf(Kuukaudet[i].HaeTulo(tulo.Nimi))].Poistettava == true)
                         {
                             Kuukaudet[i].Tulot.RemoveAt(Kuukaudet[i].Tulot.IndexOf(Kuukaudet[i].HaeTulo(tulo.Nimi)));
                         }
                         else
                         {
                             Kuukaudet[i].Tulot[Kuukaudet[i].Tulot.IndexOf(Kuukaudet[i].HaeTulo(tulo.Nimi))].Toistuva = false;
-                            if (Kuukaudet[i].Nimi != kuukausi.Nimi)
-                            {
-                                Kuukaudet[i].Tulot[Kuukaudet[i].Tulot.IndexOf(Kuukaudet[i].HaeTulo(tulo.Nimi))].Määrä = 0;
-                            }
                         }
                     }
                 }

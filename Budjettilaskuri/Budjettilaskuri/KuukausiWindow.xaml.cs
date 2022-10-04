@@ -32,6 +32,8 @@ namespace Budjettilaskuri
             comboBox2.ItemsSource = kuukausi.Tulot;
             kokoMenot.Text = kuukausi.KokoMenot().ToString() + " €";
             kokoTulot.Text = kuukausi.KokoTulot().ToString() + " €";
+            poistaMenoButton.Visibility = Visibility.Hidden;
+            poistaTuloButton.Visibility = Visibility.Hidden;
         }
 
         private void comboBox_SelectionChanged(object sender, SelectionChangedEventArgs e)
@@ -45,6 +47,15 @@ namespace Budjettilaskuri
             {
                 toistuvaCheck.IsChecked = false;
             }
+
+            if ((comboBox.SelectedItem as Meno).Poistettava)
+            {
+                poistaMenoButton.Visibility = Visibility.Visible;
+            }
+            else
+            {
+                poistaMenoButton.Visibility = Visibility.Hidden;
+            }
         }
 
         private void comboBox2_SelectionChanged(object sender, SelectionChangedEventArgs e)
@@ -57,6 +68,15 @@ namespace Budjettilaskuri
             else
             {
                 toistuvaCheck.IsChecked = false;
+            }
+
+            if ((comboBox2.SelectedItem as Tulo).Poistettava)
+            {
+                poistaTuloButton.Visibility = Visibility.Visible;
+            }
+            else
+            {
+                poistaTuloButton.Visibility = Visibility.Hidden;
             }
         }
 

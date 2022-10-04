@@ -39,11 +39,19 @@ namespace Budjettilaskuri
                 {
                     double.TryParse(määräText.Text, out määrä);
                     meno = new Meno(nimiText.Text, määrä);
+                    if (toistuvaCheck.IsChecked == true)
+                    {
+                        meno.Toistuva = true;
+                    }
                 }
                 else
                 {
                     double.TryParse(määräText.Text, out määrä);
                     tulo = new Tulo(nimiText.Text, määrä);
+                    if (toistuvaCheck.IsChecked == true)
+                    {
+                        tulo.Toistuva = true;
+                    }
                 }
             }
         }

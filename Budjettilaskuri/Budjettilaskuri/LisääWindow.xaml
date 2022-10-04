@@ -14,6 +14,7 @@
         <Label Content="€" HorizontalAlignment="Left" Margin="290,120,0,0" VerticalAlignment="Top"/>
         <Button Content="Ok" HorizontalAlignment="Left" Margin="107,179,0,0" VerticalAlignment="Top" IsDefault="True" Height="28" Width="31" Click="Button_Click"/>
         <Button Content="Peruuta" HorizontalAlignment="Left" Margin="222,179,0,0" VerticalAlignment="Top" IsCancel="True" Height="28" Width="51"/>
+        <CheckBox x:Name="toistuvaCheck" Content="Toistuva" HorizontalAlignment="Left" Margin="159,147,0,0" VerticalAlignment="Top"/>
 
     </Grid>
 </Window>

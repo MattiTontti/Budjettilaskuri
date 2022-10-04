@@ -11,6 +11,7 @@ namespace Budjettilaskuri
         public string Nimi { get; set; } = "";
         public double Määrä { get; set; }
         public bool Toistuva { get; set; } = false;
+        public bool Poistettava { get; set; } = true;
         public List<bool> Olemassa { get; set; } = new List<bool> { };
         public Raha()
         {

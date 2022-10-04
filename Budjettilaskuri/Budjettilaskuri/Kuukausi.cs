@@ -36,14 +36,19 @@ namespace Budjettilaskuri
                 default: Nimi = ""; break;
             }
             Meno vuokralaina = new Meno("Vuokra / laina", 0);
+            vuokralaina.Poistettava = false;
             LisääMeno(vuokralaina);
             Meno sähkö = new Meno("Sähkö", 0);
+            sähkö.Poistettava = false;
             LisääMeno(sähkö);
             Meno vesi = new Meno("Vesi", 0);
+            vesi.Poistettava = false;
             LisääMeno(vesi);
             Meno ruoka = new Meno("Ruoka", 0);
+            ruoka.Poistettava = false;
             LisääMeno(ruoka);
             Meno matkakulut = new Meno("Matkakulut", 0);
+            matkakulut.Poistettava = false;
             LisääMeno(matkakulut);
         }
         /// <summary>
@@ -57,7 +62,7 @@ namespace Budjettilaskuri
             {
                 d += m.Määrä;
             }
-            return d;
+            return Math.Round(d, 2);
         }
         /// <summary>
         /// Laskee kuukauden tulot
@@ -70,7 +75,7 @@ namespace Budjettilaskuri
             {
                 d += t.Määrä;
             }
-            return d;
+            return Math.Round(d, 2);
         }
 
         /// <summary>
