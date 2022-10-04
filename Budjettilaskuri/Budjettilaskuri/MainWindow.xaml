@@ -99,6 +99,7 @@
         <Button x:Name="lokaKK" Content="Lokakuu" HorizontalAlignment="Left" Margin="587,5,0,0" VerticalAlignment="Top" Width="62" Grid.Row="3" Height="20" Click="KK_Click"/>
         <Button x:Name="marrasKK" Content="Marraskuu" HorizontalAlignment="Left" Margin="649,5,0,0" VerticalAlignment="Top" Width="62" Grid.Row="3" Height="20" Click="KK_Click"/>
         <Button x:Name="jouluKK" Content="Joulukuu" HorizontalAlignment="Left" Margin="711,5,0,0" VerticalAlignment="Top" Width="65" Grid.Row="3" RenderTransformOrigin="0.566,0.624" Height="20" Click="KK_Click"/>
+        <Button x:Name="nollaaButton" Content="Nollaa" HorizontalAlignment="Left" Margin="10,46,0,0" VerticalAlignment="Top" Width="67" Grid.Row="3" Height="20" Background="#FF121111" Foreground="#FFFFF8F8" Click="nollaaButton_Click" />
 
 
 

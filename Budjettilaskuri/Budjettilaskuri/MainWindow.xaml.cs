@@ -81,11 +81,19 @@ namespace Budjettilaskuri
                     num = 11; break;
 
             }
-
             KuukausiWindow kkwindow = new KuukausiWindow(vuosi.Kuukaudet[num]);
             kkwindow.ShowDialog();
-            vuosi.Kuukaudet[num] = kkwindow.kuukausi;
             Kuukausi_Check();
+        }
+
+        private void nollaaButton_Click(object sender, RoutedEventArgs e)
+        {
+            var m = MessageBox.Show("Haluatko varmasti nollata budjetin?", "Nollaa budjetti", MessageBoxButton.YesNo);
+            if (m == MessageBoxResult.Yes)
+            {
+                vuosi = new Vuosi();
+                Kuukausi_Check();
+            }
         }
     }
 }

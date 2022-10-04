@@ -136,13 +136,20 @@ namespace Budjettilaskuri
             {
                 for (int i = 0; i < 12; i++)
                 {
-                    if (Kuukaudet[i].Nimi != kuukausi.Nimi && (meno.Olemassa[i] == false || Kuukaudet[i].Menot[Kuukaudet[i].Menot.IndexOf(Kuukaudet[i].HaeMeno(meno.Nimi))].Määrä == 0) && Kuukaudet[i].Menot[Kuukaudet[i].Menot.IndexOf(Kuukaudet[i].HaeMeno(meno.Nimi))].Poistettava == true)
+                    int n = Kuukaudet[i].Menot.IndexOf(Kuukaudet[i].HaeMeno(meno.Nimi));
+                    Meno m = Kuukaudet[i].Menot[n];
+
+                    if (Kuukaudet[i].Nimi != kuukausi.Nimi && (meno.Olemassa[i] == false || m.Määrä == 0) && m.Poistettava == true)
                     {
-                        Kuukaudet[i].Menot.RemoveAt(Kuukaudet[i].Menot.IndexOf(Kuukaudet[i].HaeMeno(meno.Nimi)));
+                        Kuukaudet[i].Menot.RemoveAt(n);
                     }
                     else
                     {
-                        Kuukaudet[i].Menot[Kuukaudet[i].Menot.IndexOf(Kuukaudet[i].HaeMeno(meno.Nimi))].Toistuva = false;
+                        m.Toistuva = false;
+                        if (Kuukaudet[i].Nimi != kuukausi.Nimi)
+                        {
+                            m.Määrä = 0;
+                        }
                     }
                 }
             }
@@ -174,13 +181,20 @@ namespace Budjettilaskuri
                 {
                     for (int i = 0; i < 12; i++)
                     {
-                        if (Kuukaudet[i].Nimi != kuukausi.Nimi && (tulo.Olemassa[i] == false || Kuukaudet[i].Tulot[Kuukaudet[i].Tulot.IndexOf(Kuukaudet[i].HaeTulo(tulo.Nimi))].Määrä == 0) && Kuukaudet[i].Tulot[Kuukaudet[i].Tulot.IndexOf(Kuukaudet[i].HaeTulo(tulo.Nimi))].Poistettava == true)
+                        int n = Kuukaudet[i].Tulot.IndexOf(Kuukaudet[i].HaeTulo(tulo.Nimi));
+                        Tulo t = Kuukaudet[i].Tulot[n];
+
+                        if (Kuukaudet[i].Nimi != kuukausi.Nimi && (tulo.Olemassa[i] == false || t.Määrä == 0) && t.Poistettava == true)
                         {
-                            Kuukaudet[i].Tulot.RemoveAt(Kuukaudet[i].Tulot.IndexOf(Kuukaudet[i].HaeTulo(tulo.Nimi)));
+                            Kuukaudet[i].Tulot.RemoveAt(n);
                         }
                         else
                         {
-                            Kuukaudet[i].Tulot[Kuukaudet[i].Tulot.IndexOf(Kuukaudet[i].HaeTulo(tulo.Nimi))].Toistuva = false;
+                            t.Toistuva = false;
+                            if (Kuukaudet[i].Nimi != kuukausi.Nimi)
+                            {
+                                t.Määrä = 0;
+                            }
                         }
                     }
                 }
