@@ -8,24 +8,19 @@
     "net6.0-windows7.0": []
   },
   "packageFolders": {
-    "C:\\Users\\panuk\\.nuget\\packages\\": {},
-    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
+    "C:\\Users\\vpelt\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\panuk\\Desktop\\Budjettilaskuri\\Budjettilaskuri\\Budjettilaskuri\\Budjettilaskuri.csproj",
+      "projectUniqueName": "C:\\Users\\vpelt\\Desktop\\Projekti\\Budjettilaskuri\\Budjettilaskuri\\Budjettilaskuri\\Budjettilaskuri.csproj",
       "projectName": "Budjettilaskuri",
-      "projectPath": "C:\\Users\\panuk\\Desktop\\Budjettilaskuri\\Budjettilaskuri\\Budjettilaskuri\\Budjettilaskuri.csproj",
-      "packagesPath": "C:\\Users\\panuk\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\panuk\\Desktop\\Budjettilaskuri\\Budjettilaskuri\\Budjettilaskuri\\obj\\",
+      "projectPath": "C:\\Users\\vpelt\\Desktop\\Projekti\\Budjettilaskuri\\Budjettilaskuri\\Budjettilaskuri\\Budjettilaskuri.csproj",
+      "packagesPath": "C:\\Users\\vpelt\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\vpelt\\Desktop\\Projekti\\Budjettilaskuri\\Budjettilaskuri\\Budjettilaskuri\\obj\\",
       "projectStyle": "PackageReference",
-      "fallbackFolders": [
-        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
-      ],
       "configFilePaths": [
-        "C:\\Users\\panuk\\AppData\\Roaming\\NuGet\\NuGet.Config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+        "C:\\Users\\vpelt\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [

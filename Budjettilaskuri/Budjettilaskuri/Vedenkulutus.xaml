@@ -1,0 +1,18 @@
+﻿<Window x:Class="Budjettilaskuri.Vedenkulutus"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Budjettilaskuri"
+        mc:Ignorable="d"
+        Title="Vedenkulutus" Height="450" Width="800">
+    <Grid>
+        <Label x:Name="Vesikk" Content="Kuukauden vedenkulutus" HorizontalAlignment="Left" Margin="150,150,0,0" VerticalAlignment="Top" FontSize="20"/>
+        <Label x:Name="EdellVesikk" Content="Edellisen kuukauden vedenkulutus" HorizontalAlignment="Left" Margin="150,200,0,0" VerticalAlignment="Top" FontSize="20"/>
+        <Label Content="Kuukauden kulutuslukema" HorizontalAlignment="Left" Margin="150,250,0,0" VerticalAlignment="Top" FontSize="20"/>
+        <TextBox x:Name="VesiKKK" HorizontalAlignment="Left" Margin="600,150,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" FontSize="20"/>
+        <TextBox x:Name="EdellKKK" HorizontalAlignment="Left" Margin="600,200,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" FontSize="20"/>
+        <TextBlock x:Name="VesiKKL" HorizontalAlignment="Left" Margin="600,250,0,0" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="20" Width="120"/>
+
+    </Grid>
+</Window>

@@ -8,12 +8,24 @@
     <Compile Update="LisääWindow.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Update="Sähkönkulutus.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Vedenkulutus.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <Page Update="KuukausiWindow.xaml">
       <SubType>Designer</SubType>
     </Page>
     <Page Update="LisääWindow.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Sähkönkulutus.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Vedenkulutus.xaml">
       <SubType>Designer</SubType>
     </Page>
   </ItemGroup>
