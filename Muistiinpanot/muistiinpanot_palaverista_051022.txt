@@ -1,0 +1,11 @@
+Muistiinpanot kokous 05.10.2022 klo 11.00
+Paikalla: Valtteri Peltoluhta, Panu Käppi, Matti Tontti
+
+Valtteri teki veden- ja sähkönkulutusikkunat
+Matti on saanut kuukausi-ikkunan xaml melkein valmiiksi
+Panu on saanut menojen ja tulojen muokkauksen ja lisäämisen toimimaan
+Matti tekee kuukausi-ikkunan, lisäysikkunan ja veden- ja sähkönkulutusikkunoiden visualisoinnin
+Valtteri tekee veden- ja sähkönkulutusikkunoiden koodin
+Panu täydentää vaatimusmäärittelyä
+
+Seuraava kokous 10.10.2022
