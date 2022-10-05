@@ -26,7 +26,7 @@ namespace Budjettilaskuri
 
         private void Skulutus_TextChanged(object sender, TextChangedEventArgs e)
         {
-
+           
         }
 
         private void SyötäKäyttöM_TextChanged(object sender, TextChangedEventArgs e)

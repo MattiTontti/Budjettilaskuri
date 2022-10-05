@@ -54,3 +54,5 @@ C:\Users\panuk\Desktop\Budjettilaskuri\Budjettilaskuri\Budjettilaskuri\obj\Debug
 C:\Users\panuk\Desktop\Budjettilaskuri\Budjettilaskuri\Budjettilaskuri\obj\Debug\net6.0-windows\Vedenkulutus.g.cs
 C:\Users\panuk\Desktop\Budjettilaskuri\Budjettilaskuri\Budjettilaskuri\obj\Debug\net6.0-windows\Sähkönkulutus.baml
 C:\Users\panuk\Desktop\Budjettilaskuri\Budjettilaskuri\Budjettilaskuri\obj\Debug\net6.0-windows\Vedenkulutus.baml
+C:\Users\vpelt\Desktop\Projekti\Budjettilaskuri\Budjettilaskuri\Budjettilaskuri\obj\Debug\net6.0-windows\Vedenkulutus.g.cs
+C:\Users\vpelt\Desktop\Projekti\Budjettilaskuri\Budjettilaskuri\Budjettilaskuri\obj\Debug\net6.0-windows\Vedenkulutus.baml
