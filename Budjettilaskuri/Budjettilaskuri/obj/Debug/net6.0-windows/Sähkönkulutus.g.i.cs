@@ -109,7 +109,7 @@ namespace Budjettilaskuri {
                 return;
             }
             _contentLoaded = true;
-            System.Uri resourceLocater = new System.Uri("/Budjettilaskuri;component/s%c3%a4hk%c3%b6nkulutus.xaml", System.UriKind.Relative);
+            System.Uri resourceLocater = new System.Uri("/Budjettilaskuri;V1.0.0.0;component/s%c3%a4hk%c3%b6nkulutus.xaml", System.UriKind.Relative);
             
             #line 1 "..\..\..\Sähkönkulutus.xaml"
             System.Windows.Application.LoadComponent(this, resourceLocater);
