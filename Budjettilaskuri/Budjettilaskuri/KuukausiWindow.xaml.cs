@@ -127,6 +127,12 @@ namespace Budjettilaskuri
                 comboBox.ItemsSource = new List<string>();
                 comboBox.ItemsSource = kuukausi.Menot;
                 comboBox.SelectedIndex = kuukausi.Menot.Count - 1;
+
+                if ((comboBox.SelectedItem as Meno).Toistuva)
+                {
+                    MainWindow.vuosi.ToistuvaMeno((Meno)comboBox.SelectedItem);
+                }
+                kokoMenot.Text = kuukausi.KokoMenot().ToString() + " €";
             }
         }
 
@@ -140,6 +146,7 @@ namespace Budjettilaskuri
                 comboBox2.ItemsSource = new List<string>();
                 comboBox2.ItemsSource = kuukausi.Tulot;
                 comboBox2.SelectedIndex = kuukausi.Tulot.Count - 1;
+                kokoTulot.Text = kuukausi.KokoTulot().ToString() + " €";
             }
         }
 
