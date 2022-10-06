@@ -59,7 +59,7 @@ namespace Budjettilaskuri
             {
                 menot += kk.KokoMenot();
             }
-            return menot;
+            return Math.Round(menot, 2);
         }
         /// <summary>
         /// Laskee vuoden koko tulot
@@ -72,7 +72,7 @@ namespace Budjettilaskuri
             {
                 tulot += kk.KokoTulot();
             }
-            return tulot;
+            return Math.Round(tulot, 2);
         }
         /// <summary>
         /// Laskee vuoden tulojen ja menojen erotuksen

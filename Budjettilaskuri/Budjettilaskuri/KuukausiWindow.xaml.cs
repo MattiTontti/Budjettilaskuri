@@ -51,23 +51,26 @@ namespace Budjettilaskuri
 
         private void comboBox_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
-            menotBox.Text = (comboBox.SelectedItem as Meno).Määrä.ToString();
-            if ((comboBox.SelectedItem as Meno).Toistuva)
+            if (comboBox.SelectedItem is Meno)
             {
-                toistuvaCheck.IsChecked = true;
-            }
-            else
-            {
-                toistuvaCheck.IsChecked = false;
-            }
+                menotBox.Text = (comboBox.SelectedItem as Meno).Määrä.ToString();
+                if ((comboBox.SelectedItem as Meno).Toistuva)
+                {
+                    toistuvaCheck.IsChecked = true;
+                }
+                else
+                {
+                    toistuvaCheck.IsChecked = false;
+                }
 
-            if ((comboBox.SelectedItem as Meno).Poistettava)
-            {
-                poistaMenoButton.Visibility = Visibility.Visible;
-            }
-            else
-            {
-                poistaMenoButton.Visibility = Visibility.Hidden;
+                if ((comboBox.SelectedItem as Meno).Poistettava)
+                {
+                    poistaMenoButton.Visibility = Visibility.Visible;
+                }
+                else
+                {
+                    poistaMenoButton.Visibility = Visibility.Hidden;
+                }
             }
         }
 
@@ -121,6 +124,8 @@ namespace Budjettilaskuri
             if (window.bcheck)
             {
                 kuukausi.LisääMeno(window.meno);
+                comboBox.ItemsSource = new List<string>();
+                comboBox.ItemsSource = kuukausi.Menot;
                 comboBox.SelectedIndex = kuukausi.Menot.Count - 1;
             }
         }
@@ -132,6 +137,8 @@ namespace Budjettilaskuri
             if (window.bcheck)
             {
                 kuukausi.LisääTulo(window.tulo);
+                comboBox2.ItemsSource = new List<string>();
+                comboBox2.ItemsSource = kuukausi.Tulot;
                 comboBox2.SelectedIndex = kuukausi.Tulot.Count - 1;
             }
         }
@@ -172,23 +179,27 @@ namespace Budjettilaskuri
 
         private void poistaMeno(object sender, RoutedEventArgs e)
         {
-            var m = MessageBox.Show("Poista meno?", "Poista meno", MessageBoxButton.YesNo);
+            var m = MessageBox.Show("Poista meno?", "Poista meno", MessageBoxButton.YesNo, MessageBoxImage.Question);
             if (m == MessageBoxResult.Yes)
             {
+                int index = comboBox.SelectedIndex;
                 kuukausi.Menot.Remove((Meno)comboBox.SelectedItem);
-                comboBox.SelectedIndex += 1;
-                comboBox.SelectedIndex -= 1;
+                comboBox.ItemsSource = new List<string>();
+                comboBox.ItemsSource = kuukausi.Menot;
+                comboBox.SelectedIndex = index;
             }
         }
 
         private void poistaTulo(object sender, RoutedEventArgs e)
         {
-            var m = MessageBox.Show("Poista tulo?", "Poista tulo", MessageBoxButton.YesNo);
+            var m = MessageBox.Show("Poista tulo?", "Poista tulo", MessageBoxButton.YesNo, MessageBoxImage.Question);
             if (m == MessageBoxResult.Yes)
             {
+                int index = comboBox2.SelectedIndex;
                 kuukausi.Tulot.Remove((Tulo)comboBox2.SelectedItem);
-                comboBox2.SelectedIndex += 1;
-                comboBox2.SelectedIndex -= 1;
+                comboBox2.ItemsSource = new List<string>();
+                comboBox2.ItemsSource = kuukausi.Tulot;
+                comboBox2.SelectedIndex = index;
             }
         }
     }

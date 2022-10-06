@@ -49,8 +49,10 @@ namespace Budjettilaskuri
 
         private void KuukausiMäärä_Check(TextBlock Kuukausi)
         {
-            Kuukausi.Text = vuosi.Kuukaudet[0].Erotus();
-            if (vuosi.Kuukaudet[0].Erotus()[0] == '-')
+            string s = vuosi.Kuukaudet[vuosi.Kuukaudet.IndexOf(vuosi.HaeKuukausi(Kuukausi.Name))].Erotus();
+
+            Kuukausi.Text = s;
+            if (s[0] == '-')
             {
                 Kuukausi.Foreground = Brushes.Red;
             }
@@ -122,18 +124,13 @@ namespace Budjettilaskuri
 
         private void nollaaButton_Click(object sender, RoutedEventArgs e)
         {
-            var m = MessageBox.Show("Haluatko varmasti nollata budjetin?", "Nollaa budjetti", MessageBoxButton.YesNo);
+            var m = MessageBox.Show("Haluatko varmasti nollata budjetin?", "Nollaa budjetti", MessageBoxButton.YesNo, MessageBoxImage.Question);
             if (m == MessageBoxResult.Yes)
             {
                 vuosi = new Vuosi();
                 Kuukausi_Check();
                 KuukausiMäärä_Kaikki();
             }
-        }
-
-        private void kk_Initialized(object sender, EventArgs e)
-        {
-
         }
     }
 }
