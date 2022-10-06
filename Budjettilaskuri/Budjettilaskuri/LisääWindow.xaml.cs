@@ -38,6 +38,14 @@ namespace Budjettilaskuri
                 if (i == 0)
                 {
                     double.TryParse(määräText.Text, out määrä);
+
+                    if (kk.OnkoMeno(nimiText.Text))
+                    {
+                        MessageBox.Show($"'{nimiText.Text}' niminen meno on jo olemassa", "Virhe", MessageBoxButton.OK, MessageBoxImage.Error);
+                        bcheck = false;
+                        e.Cancel = true;
+                    }
+
                     meno = new Meno(nimiText.Text, määrä);
                     if (toistuvaCheck.IsChecked == true)
                     {
@@ -47,6 +55,14 @@ namespace Budjettilaskuri
                 else
                 {
                     double.TryParse(määräText.Text, out määrä);
+
+                    if (kk.OnkoTulo(nimiText.Text))
+                    {
+                        MessageBox.Show($"'{nimiText.Text}' niminen tulo on jo olemassa", "Virhe", MessageBoxButton.OK, MessageBoxImage.Error);
+                        bcheck = false;
+                        e.Cancel = true;
+                    }
+
                     tulo = new Tulo(nimiText.Text, määrä);
                     if (toistuvaCheck.IsChecked == true)
                     {
