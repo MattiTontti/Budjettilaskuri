@@ -20,7 +20,7 @@
         <CheckBox x:Name="toistuvaCheck" Content="Toistuva" HorizontalAlignment="Left" Margin="413,203,0,0" VerticalAlignment="Top" Checked="toistuvaCheck_Checked" Unchecked="toistuvaCheck_Unchecked"/>
         <CheckBox x:Name="toistuvaCheck2" Content="Toistuva" HorizontalAlignment="Left" Margin="413,267,0,0" VerticalAlignment="Top" Checked="toistuvaCheck2_Checked" Unchecked="toistuvaCheck2_Unchecked"/>
         <Button x:Name="poistaMenoButton" Content="Poista meno" HorizontalAlignment="Left" Margin="183,180,0,0" VerticalAlignment="Top" Foreground="#9C3938" FontSize="10" Click="poistaMeno"/>
-        <Button x:Name="poistaTuloButton" Content="Poista tulo" HorizontalAlignment="Left" Margin="191,246,0,0" VerticalAlignment="Top" Foreground="#9C3938" FontSize="10"/>
+        <Button x:Name="poistaTuloButton" Content="Poista tulo" HorizontalAlignment="Left" Margin="191,246,0,0" VerticalAlignment="Top" Foreground="#9C3938" FontSize="10" Click="poistaTulo"/>
         <TextBlock x:Name="kuukausiNimi" HorizontalAlignment="Left" Margin="106,47,0,0" TextWrapping="Wrap" VerticalAlignment="Top" IsEnabled="False" FontSize="18"/>
         <Label Content="Koko menot:" HorizontalAlignment="Left" Margin="286,37,0,0" VerticalAlignment="Top"/>
         <Label Content="Koko tulot:" HorizontalAlignment="Left" Margin="291,82,0,0" VerticalAlignment="Top"/>

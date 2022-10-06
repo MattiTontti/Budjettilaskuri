@@ -118,9 +118,16 @@ namespace Budjettilaskuri
         /// Laskee tulojen ja menojen erotuksen
         /// </summary>
         /// <returns>Tulojen ja menojen erotus</returns>
-        internal double Erotus()
+        internal string Erotus()
         {
-            return KokoTulot() - KokoMenot();
+            string s = "";
+            double d = KokoTulot() - KokoMenot();
+            if (d >= 0)
+            {
+                s += "+";
+            }
+            s += d + " €";
+            return s;
         }
         /// <summary>
         /// Muokkaa meno

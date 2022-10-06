@@ -15,6 +15,7 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 using System.Text.Json;
+using System.Reflection;
 
 namespace Budjettilaskuri
 {
@@ -32,7 +33,9 @@ namespace Budjettilaskuri
                 vuosi = JsonSerializer.Deserialize<Vuosi>(File.ReadAllText("vuosi.json"));
             }
             Kuukausi_Check();
+            KuukausiMäärä_Kaikki();
         }
+
 
         private void Kuukausi_Check()
         {
@@ -43,6 +46,36 @@ namespace Budjettilaskuri
             menotV.Text = vuosi.KokoMenot() + " €";
             tulotV.Text = vuosi.KokoTulot() + " €";
         }
+
+        private void KuukausiMäärä_Check(TextBlock Kuukausi)
+        {
+            Kuukausi.Text = vuosi.Kuukaudet[0].Erotus();
+            if (vuosi.Kuukaudet[0].Erotus()[0] == '-')
+            {
+                Kuukausi.Foreground = Brushes.Red;
+            }
+            else
+            {
+                Kuukausi.Foreground = Brushes.Green;
+            }
+        }
+
+        private void KuukausiMäärä_Kaikki()
+        {
+            KuukausiMäärä_Check(Tammikuu);
+            KuukausiMäärä_Check(Helmikuu);
+            KuukausiMäärä_Check(Maaliskuu);
+            KuukausiMäärä_Check(Huhtikuu);
+            KuukausiMäärä_Check(Toukokuu);
+            KuukausiMäärä_Check(Kesäkuu);
+            KuukausiMäärä_Check(Heinäkuu);
+            KuukausiMäärä_Check(Elokuu);
+            KuukausiMäärä_Check(Syyskuu);
+            KuukausiMäärä_Check(Lokakuu);
+            KuukausiMäärä_Check(Marraskuu);
+            KuukausiMäärä_Check(Joulukuu);
+        }
+
 
         private void Window_Closing(object sender, System.ComponentModel.CancelEventArgs e)
         {
@@ -84,6 +117,7 @@ namespace Budjettilaskuri
             KuukausiWindow kkwindow = new KuukausiWindow(vuosi.Kuukaudet[num]);
             kkwindow.ShowDialog();
             Kuukausi_Check();
+            KuukausiMäärä_Kaikki();
         }
 
         private void nollaaButton_Click(object sender, RoutedEventArgs e)
@@ -93,7 +127,13 @@ namespace Budjettilaskuri
             {
                 vuosi = new Vuosi();
                 Kuukausi_Check();
+                KuukausiMäärä_Kaikki();
             }
+        }
+
+        private void kk_Initialized(object sender, EventArgs e)
+        {
+
         }
     }
 }

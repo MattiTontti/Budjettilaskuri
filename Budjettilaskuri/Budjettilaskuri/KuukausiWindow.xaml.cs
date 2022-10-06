@@ -32,8 +32,21 @@ namespace Budjettilaskuri
             comboBox2.ItemsSource = kuukausi.Tulot;
             kokoMenot.Text = kuukausi.KokoMenot().ToString() + " €";
             kokoTulot.Text = kuukausi.KokoTulot().ToString() + " €";
-            poistaMenoButton.Visibility = Visibility.Hidden;
-            poistaTuloButton.Visibility = Visibility.Hidden;
+
+            if (!(comboBox.SelectedItem as Meno).Poistettava)
+            {
+                poistaMenoButton.Visibility = Visibility.Hidden;
+            }
+
+            if (comboBox2.SelectedItem is Tulo && (comboBox2.SelectedItem as Tulo).Poistettava)
+            {
+                poistaTuloButton.Visibility = Visibility.Visible;
+            }
+            else
+            {
+                poistaTuloButton.Visibility = Visibility.Hidden;
+            }
+
         }
 
         private void comboBox_SelectionChanged(object sender, SelectionChangedEventArgs e)
@@ -60,21 +73,28 @@ namespace Budjettilaskuri
 
         private void comboBox2_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
-            tulotBox.Text = (comboBox2.SelectedItem as Tulo).Määrä.ToString();
-            if ((comboBox2.SelectedItem as Tulo).Toistuva)
+            if (comboBox2.SelectedItem is Tulo)
             {
-                toistuvaCheck2.IsChecked = true;
-            }
-            else
-            {
-                toistuvaCheck.IsChecked = false;
-            }
+                tulotBox.Text = (comboBox2.SelectedItem as Tulo).Määrä.ToString();
+                if ((comboBox2.SelectedItem as Tulo).Toistuva)
+                {
+                    toistuvaCheck2.IsChecked = true;
+                }
+                else
+                {
+                    toistuvaCheck.IsChecked = false;
+                }
 
-            if ((comboBox2.SelectedItem as Tulo).Poistettava)
-            {
-                poistaTuloButton.Visibility = Visibility.Visible;
+                if ((comboBox2.SelectedItem as Tulo).Poistettava)
+                {
+                    poistaTuloButton.Visibility = Visibility.Visible;
+                }
+                else
+                {
+                    poistaTuloButton.Visibility = Visibility.Hidden;
+                }
             }
-            else
+            if (comboBox2.SelectedItem == null)
             {
                 poistaTuloButton.Visibility = Visibility.Hidden;
             }
