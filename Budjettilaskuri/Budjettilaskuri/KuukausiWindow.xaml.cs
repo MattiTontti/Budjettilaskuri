@@ -57,6 +57,7 @@ namespace Budjettilaskuri
 
         private void comboBox_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
+            toistuvaCheck.IsChecked = false;
             if (comboBox.SelectedItem is Meno)
             {
                 menotBox.Text = (comboBox.SelectedItem as Meno).Määrä.ToString();
@@ -82,6 +83,7 @@ namespace Budjettilaskuri
 
         private void comboBox2_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
+            toistuvaCheck2.IsChecked = false;
             if (comboBox2.SelectedItem is Tulo)
             {
                 tulotBox.Text = (comboBox2.SelectedItem as Tulo).Määrä.ToString();
@@ -91,7 +93,7 @@ namespace Budjettilaskuri
                 }
                 else
                 {
-                    toistuvaCheck.IsChecked = false;
+                    toistuvaCheck2.IsChecked = false;
                 }
 
                 if ((comboBox2.SelectedItem as Tulo).Poistettava)
@@ -185,7 +187,10 @@ namespace Budjettilaskuri
 
         private void toistuvaCheck_Unchecked(object sender, RoutedEventArgs e)
         {
-            MainWindow.vuosi.EiToistuvaMeno((Meno)comboBox.SelectedItem, MainWindow.vuosi.Kuukaudet[MainWindow.vuosi.Kuukaudet.IndexOf(MainWindow.vuosi.HaeKuukausi(kuukausi.Nimi))]);
+            if (comboBox.SelectedItem != null)
+            {
+                MainWindow.vuosi.EiToistuvaMeno((Meno)comboBox.SelectedItem, MainWindow.vuosi.Kuukaudet[MainWindow.vuosi.Kuukaudet.IndexOf(MainWindow.vuosi.HaeKuukausi(kuukausi.Nimi))]);
+            }
         }
 
         private void toistuvaCheck2_Unchecked(object sender, RoutedEventArgs e)

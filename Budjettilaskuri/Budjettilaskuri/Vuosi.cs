@@ -89,7 +89,6 @@ namespace Budjettilaskuri
         /// <param name="meno"></param>
         internal void ToistuvaMeno(Meno meno)
         {
-            meno.OlemassaCheck(this);
             foreach (Kuukausi kk in Kuukaudet)
             {
                 if (!kk.OnkoMeno(meno.Nimi))
@@ -110,7 +109,6 @@ namespace Budjettilaskuri
         /// <param name="tulo"></param>
         internal void ToistuvaTulo(Tulo tulo)
         {
-            tulo.OlemassaCheck(this);
             foreach (Kuukausi kk in Kuukaudet)
             {
                 if (!kk.OnkoTulo(tulo.Nimi))
@@ -132,38 +130,21 @@ namespace Budjettilaskuri
         /// <param name="kuukausi"></param>
         internal void EiToistuvaMeno(Meno meno, Kuukausi kuukausi)
         {
-            if (meno.Olemassa.Count > 0)
+            for (int i = 0; i < 12; i++)
             {
-                for (int i = 0; i < 12; i++)
-                {
-                    int n = Kuukaudet[i].Menot.IndexOf(Kuukaudet[i].HaeMeno(meno.Nimi));
-                    Meno m = Kuukaudet[i].Menot[n];
+                int n = Kuukaudet[i].Menot.IndexOf(Kuukaudet[i].HaeMeno(meno.Nimi));
+                Meno m = Kuukaudet[i].Menot[n];
 
-                    if (Kuukaudet[i].Nimi != kuukausi.Nimi && (meno.Olemassa[i] == false || m.Määrä == 0) && m.Poistettava == true)
-                    {
-                        Kuukaudet[i].Menot.RemoveAt(n);
-                    }
-                    else
-                    {
-                        m.Toistuva = false;
-                        if (Kuukaudet[i].Nimi != kuukausi.Nimi)
-                        {
-                            m.Määrä = 0;
-                        }
-                    }
-                }
-            }
-            else
-            {
-                foreach (Kuukausi kk in Kuukaudet)
+                if (Kuukaudet[i].Nimi != kuukausi.Nimi && m.Poistettava == true)
                 {
-                    if (kk.Nimi != kuukausi.Nimi)
+                    Kuukaudet[i].Menot.RemoveAt(n);
+                }
+                else
+                {
+                    m.Toistuva = false;
+                    if (Kuukaudet[i].Nimi != kuukausi.Nimi)
                     {
-                        kk.Menot.RemoveAt(kk.Menot.IndexOf(kk.HaeMeno(meno.Nimi)));
-                    }
-                    else
-                    {
-                        kk.Menot[kk.Menot.IndexOf(kk.HaeMeno(meno.Nimi))].Toistuva = false;
+                        m.Määrä = 0;
                     }
                 }
             }
@@ -176,40 +157,21 @@ namespace Budjettilaskuri
         /// <param name="kuukausi"></param>
         internal void EiToistuvaTulo(Tulo tulo, Kuukausi kuukausi)
         {
+            for (int i = 0; i < 12; i++)
             {
-                if (tulo.Olemassa.Count > 0)
-                {
-                    for (int i = 0; i < 12; i++)
-                    {
-                        int n = Kuukaudet[i].Tulot.IndexOf(Kuukaudet[i].HaeTulo(tulo.Nimi));
-                        Tulo t = Kuukaudet[i].Tulot[n];
+                int n = Kuukaudet[i].Tulot.IndexOf(Kuukaudet[i].HaeTulo(tulo.Nimi));
+                Tulo t = Kuukaudet[i].Tulot[n];
 
-                        if (Kuukaudet[i].Nimi != kuukausi.Nimi && (tulo.Olemassa[i] == false || t.Määrä == 0) && t.Poistettava == true)
-                        {
-                            Kuukaudet[i].Tulot.RemoveAt(n);
-                        }
-                        else
-                        {
-                            t.Toistuva = false;
-                            if (Kuukaudet[i].Nimi != kuukausi.Nimi)
-                            {
-                                t.Määrä = 0;
-                            }
-                        }
-                    }
+                if (Kuukaudet[i].Nimi != kuukausi.Nimi && t.Poistettava == true)
+                {
+                    Kuukaudet[i].Tulot.RemoveAt(n);
                 }
                 else
                 {
-                    foreach (Kuukausi kk in Kuukaudet)
+                    t.Toistuva = false;
+                    if (Kuukaudet[i].Nimi != kuukausi.Nimi)
                     {
-                        if (kk.Nimi != kuukausi.Nimi)
-                        {
-                            kk.Tulot.RemoveAt(kk.Tulot.IndexOf(kk.HaeTulo(tulo.Nimi)));
-                        }
-                        else
-                        {
-                            kk.Tulot[kk.Tulot.IndexOf(kk.HaeTulo(tulo.Nimi))].Toistuva = false;
-                        }
+                        t.Määrä = 0;
                     }
                 }
             }
