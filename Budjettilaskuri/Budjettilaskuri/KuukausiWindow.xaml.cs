@@ -65,10 +65,6 @@ namespace Budjettilaskuri
                 {
                     toistuvaCheck.IsChecked = true;
                 }
-                else
-                {
-                    toistuvaCheck.IsChecked = false;
-                }
 
                 if ((comboBox.SelectedItem as Meno).Poistettava)
                 {
@@ -90,10 +86,6 @@ namespace Budjettilaskuri
                 if ((comboBox2.SelectedItem as Tulo).Toistuva)
                 {
                     toistuvaCheck2.IsChecked = true;
-                }
-                else
-                {
-                    toistuvaCheck2.IsChecked = false;
                 }
 
                 if ((comboBox2.SelectedItem as Tulo).Poistettava)
