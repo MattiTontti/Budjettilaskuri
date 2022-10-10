@@ -22,6 +22,12 @@ namespace Budjettilaskuri
         public Vedenkulutus()
         {
             InitializeComponent();
+           
+            double VesiKKK = 0;
+            double EdellKKK = 0;
+
+            VesiKKL = VesiKKK - EdellKKK;
+            
         }
     }
 }

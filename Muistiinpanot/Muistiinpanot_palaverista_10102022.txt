@@ -1,0 +1,9 @@
+Muistiinpanot kokous 10.10 klo 11.00
+Paikalla:Valtteri Peltoluhta, Panu Käppi, Matti Tontti
+
+Panu ja Matti sai lähes tehtyä viikon tehtävät. 
+Valtterilla on vielä tehtävää koodin kanssa.
+Jatketaan samoilla tehtävillä seuraavaan kokoukseen.
+
+
+Viimeinen kokous 12.10.2022 Kokouksessa käydään vielä läpi bugit ja täydennykset projektiin.
