@@ -7,14 +7,24 @@
         mc:Ignorable="d"
         Title="Sähkönkulutus" Height="500" Width="400">
     <Grid>
+        <Grid.Background>
+            <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                <GradientStop Color="White" Offset="0"/>
+                <GradientStop Color="#FF00B3FF" Offset="1"/>
+            </LinearGradientBrush>
+        </Grid.Background>
         <TextBox x:Name="kWh" HorizontalAlignment="Left" Margin="290,98,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="70" FontSize="20" TextChanged="Skulutus_TextChanged"/>
-        <Label x:Name="Skulutus" Content="Sähkönkulutus/kWh" HorizontalAlignment="Left" Margin="54,90,0,0" VerticalAlignment="Top" FontSize="20" Width="190"/>
-        <Label x:Name="Smaksu" Content="Siirto maksu" HorizontalAlignment="Left" Margin="54,190,0,0" VerticalAlignment="Top" FontSize="20" Width="173"/>
-        <Label x:Name="Kmaksu" Content="Käyttö maksu" HorizontalAlignment="Left" Margin="54,290,0,0" VerticalAlignment="Top" FontSize="20"/>
         <TextBox x:Name="SyötäSiirtoM" HorizontalAlignment="Left" Margin="290,190,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="70" FontSize="20"/>
         <TextBox x:Name="SyötäKäyttöM" HorizontalAlignment="Left" Margin="290,290,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="70" FontSize="20" TextChanged="SyötäKäyttöM_TextChanged"/>
-        <Label Content="Maksut yhteensä:" HorizontalAlignment="Left" Margin="200,390,0,0" VerticalAlignment="Top" FontSize="20" Width="170"/>
-        <TextBlock x:Name="MaksutYht" HorizontalAlignment="Left" Margin="290,447,0,0" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="20" Width="70"/>
-
+        <Label Content="Maksut yhteensä:" HorizontalAlignment="Left" Margin="73,393,0,0" VerticalAlignment="Top" FontSize="20" Width="170"/>
+        <TextBlock x:Name="MaksutYht" HorizontalAlignment="Left" Margin="290,398,0,0" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="20" Width="70" Background="White"/>
+        <TextBlock x:Name="budjettilaskuri" HorizontalAlignment="Center" TextWrapping="Wrap" VerticalAlignment="Top" Width="400" RenderTransformOrigin="0.5,0.5" Height="43" Background="#FF00B3FF" FontSize="36" TextAlignment="Center" LineHeight="NaN" FontFamily="Eras ITC" Foreground="White"><Run Text="SÄHKÖ"/><Run Language="fi-fi" Text="NKULUTUS"/></TextBlock>
+        <TextBox  x:Name="Kmaksu"  HorizontalAlignment="Left" Margin="46,287,0,0" TextWrapping="Wrap" Text="Käyttö maksu" VerticalAlignment="Top" Width="206" Height="34" FontSize="20" Background="#FF8FDEFF" TextAlignment="Center" Foreground="Black" BorderBrush="Black"/>
+        <TextBox  x:Name="Smaksu"  HorizontalAlignment="Left" Margin="46,187,0,0" TextWrapping="Wrap" Text="Siirto maksu" VerticalAlignment="Top" Width="206" Height="34" FontSize="20" Background="#FF8FDEFF" TextAlignment="Center" BorderBrush="Black"/>
+        <TextBox  x:Name="Smaksu_Copy"  HorizontalAlignment="Left" Margin="46,95,0,0" TextWrapping="Wrap" Text="Sähkönkulutus /kWh" VerticalAlignment="Top" Width="206" Height="34" FontSize="20" Background="#FF8FDEFF" TextAlignment="Center" BorderBrush="Black"/>
+        <Label Content="kWh" HorizontalAlignment="Left" Margin="360,98,0,0" VerticalAlignment="Top" Foreground="#FFF1FF00" Height="34" Width="40" RenderTransformOrigin="0.5,0.472" FontSize="14"/>
+        <Label Content="€" HorizontalAlignment="Left" Margin="360,187,0,0" VerticalAlignment="Top" Foreground="#FF0F8811" Height="45" Width="21" RenderTransformOrigin="0.38,0.609" FontSize="18"/>
+        <Label Content="€" HorizontalAlignment="Left" Margin="360,287,0,0" VerticalAlignment="Top" Foreground="#FF0F8811" Height="45" Width="21" RenderTransformOrigin="0.38,0.609" FontSize="18"/>
+        <Label Content="€" HorizontalAlignment="Left" Margin="360,395,0,0" VerticalAlignment="Top" Foreground="#FF0F8811" Height="45" Width="21" RenderTransformOrigin="0.429,0.423" FontSize="18"/>
     </Grid>
 </Window>

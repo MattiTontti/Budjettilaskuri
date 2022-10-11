@@ -7,99 +7,68 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800" Closing="Window_Closing" ResizeMode="CanMinimize">
     <Grid>
+        <Grid.Background>
+            <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                <GradientStop Color="#FFA8CFE8"/>
+                <GradientStop Color="#FFB7E3FF" Offset="1"/>
+            </LinearGradientBrush>
+        </Grid.Background>
         <Grid.RowDefinitions>
             <RowDefinition Height="177*"/>
             <RowDefinition Height="65*"/>
             <RowDefinition Height="94*"/>
             <RowDefinition Height="98*"/>
         </Grid.RowDefinitions>
-        <Grid.Background>
-            <ImageBrush ImageSource="/technology-data-binary-code-network-conveying-connectivity_34629-796.jpg"/>
-        </Grid.Background>
-        <TextBlock x:Name="budjettilaskuri" HorizontalAlignment="Center" Margin="0,10,0,0" TextWrapping="Wrap" Text="Budjettilaskuri" VerticalAlignment="Top" Width="432" Height="32" TextAlignment="Center" LineHeight="16" FontSize="24" FontFamily="Arial Black" Foreground="White" Background="#FF084AA2">
-            <TextBlock.Effect>
-                <DropShadowEffect/>
-            </TextBlock.Effect>
-        </TextBlock>
-        <Rectangle HorizontalAlignment="Center" Height="377" Margin="0,47,0,0" Stroke="White" VerticalAlignment="Top" Width="800" Grid.RowSpan="4">
+        <Rectangle HorizontalAlignment="Center" Height="414" Stroke="White" VerticalAlignment="Top" Width="800" Grid.RowSpan="4" Margin="0,10,0,0" OpacityMask="Black">
             <Rectangle.Fill>
                 <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
-                    <GradientStop Color="Black"/>
-                    <GradientStop Color="Black" Offset="1"/>
-                    <GradientStop Color="#FF2D7CB9" Offset="0.02"/>
+                    <GradientStop Color="White"/>
+                    <GradientStop Color="#FF009CFF" Offset="0.99"/>
                 </LinearGradientBrush>
             </Rectangle.Fill>
         </Rectangle>
-        <TextBlock x:Name="menotKK" HorizontalAlignment="Left" Margin="156,67,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="137" RenderTransformOrigin="0.5,0.5" Height="26" Background="Gainsboro" FontSize="16">
-            <TextBlock.RenderTransform>
-                <TransformGroup>
-                    <ScaleTransform/>
-                    <SkewTransform AngleX="-3.916"/>
-                    <RotateTransform/>
-                    <TranslateTransform X="-0.546"/>
-                </TransformGroup>
-            </TextBlock.RenderTransform>
-        </TextBlock>
-        <TextBlock x:Name="tulotKK" HorizontalAlignment="Left" Margin="155,108,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="137" RenderTransformOrigin="0.5,0.5" Height="26" Background="Gainsboro" FontSize="16">
-            <TextBlock.RenderTransform>
-                <TransformGroup>
-                    <ScaleTransform/>
-                    <SkewTransform AngleX="-3.916"/>
-                    <RotateTransform/>
-                    <TranslateTransform X="-0.546"/>
-                </TransformGroup>
-            </TextBlock.RenderTransform>
-        </TextBlock>
-        <TextBlock x:Name="menotEK" HorizontalAlignment="Left" Margin="513,67,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="137" RenderTransformOrigin="0.5,0.5" Height="26" Background="Gainsboro" FontSize="16">
-            <TextBlock.RenderTransform>
-                <TransformGroup>
-                    <ScaleTransform/>
-                    <SkewTransform AngleX="-3.916"/>
-                    <RotateTransform/>
-                    <TranslateTransform X="-0.546"/>
-                </TransformGroup>
-            </TextBlock.RenderTransform>
-        </TextBlock>
-        <TextBlock x:Name="tulotEK" HorizontalAlignment="Left" Margin="513,109,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="137" RenderTransformOrigin="0.5,0.5" Height="26" Background="Gainsboro" FontSize="16">
-            <TextBlock.RenderTransform>
-                <TransformGroup>
-                    <ScaleTransform/>
-                    <SkewTransform AngleX="-3.916"/>
-                    <RotateTransform/>
-                    <TranslateTransform X="-0.546"/>
-                </TransformGroup>
-            </TextBlock.RenderTransform>
-        </TextBlock>
-        <TextBox x:Name="menotb" HorizontalAlignment="Left" Margin="24,70,0,0" TextWrapping="Wrap" Text="Menot / kk" VerticalAlignment="Top" Width="120" BorderBrush="#FF202125" Foreground="Black" SelectionTextBrush="White" BorderThickness="1,1,1,1" TextAlignment="Center" IsReadOnly="True" Cursor="Arrow" Height="18"/>
-        <TextBox x:Name="tulottbKK" HorizontalAlignment="Left" Margin="24,112,0,0" TextWrapping="Wrap" Text="Tulot / kk" VerticalAlignment="Top" Width="120" BorderBrush="#FF202125" Foreground="Black" SelectionTextBrush="White" TextAlignment="Center" IsReadOnly="True" Cursor="Arrow" Height="18"/>
-        <TextBox x:Name="menottbek" HorizontalAlignment="Left" Margin="656,70,0,0" TextWrapping="Wrap" Text="Menot / edeltävä kk" VerticalAlignment="Top" Width="120" BorderBrush="#FF202125" Foreground="Black" SelectionTextBrush="White" TextAlignment="Center" IsReadOnly="True" Cursor="Arrow" Height="18"/>
-        <TextBox x:Name="tulottbek" HorizontalAlignment="Left" Margin="656,112,0,0" TextWrapping="Wrap" Text="Tulot / edeltävä kk" VerticalAlignment="Top" Width="120" BorderBrush="#FF202125" Foreground="Black" SelectionTextBrush="White" TextAlignment="Center" IsReadOnly="True" Cursor="Arrow" Height="18"/>
+        <TextBlock x:Name="menotKK" HorizontalAlignment="Left" Margin="156,67,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="137" RenderTransformOrigin="0.5,0.5" Height="26" Background="#FFC3C3C3" FontSize="16" OpacityMask="Black" Foreground="White"></TextBlock>
+        <TextBlock x:Name="tulotKK" HorizontalAlignment="Left" Margin="155,108,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="137" RenderTransformOrigin="0.5,0.5" Height="26" Background="#FFC3C3C3" FontSize="16" Foreground="White"></TextBlock>
+        <TextBlock x:Name="menotEK" HorizontalAlignment="Left" Margin="513,67,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="137" RenderTransformOrigin="0.5,0.5" Height="26" Background="#FFC3C3C3" FontSize="16" Foreground="White"></TextBlock>
+        <TextBlock x:Name="tulotEK" HorizontalAlignment="Left" Margin="513,109,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="137" RenderTransformOrigin="0.5,0.5" Height="26" Background="#FFC3C3C3" FontSize="16" Foreground="White"></TextBlock>
+        <TextBox x:Name="menotb" HorizontalAlignment="Left" Margin="24,70,0,0" TextWrapping="Wrap" Text="Menot / kk" VerticalAlignment="Top" Width="120" BorderBrush="#FF202125" Foreground="Black" SelectionTextBrush="White" BorderThickness="1,1,1,1" TextAlignment="Center" IsReadOnly="True" Cursor="Arrow" Height="18" OpacityMask="Black" Background="#FF8FDEFF"/>
+        <TextBox x:Name="tulottbKK" HorizontalAlignment="Left" Margin="24,112,0,0" TextWrapping="Wrap" Text="Tulot / kk" VerticalAlignment="Top" Width="120" BorderBrush="#FF202125" Foreground="Black" SelectionTextBrush="White" TextAlignment="Center" IsReadOnly="True" Cursor="Arrow" Height="18" Background="#FF8FDEFF"/>
+        <TextBox x:Name="menottbek" HorizontalAlignment="Left" Margin="656,70,0,0" TextWrapping="Wrap" Text="Menot / edeltävä kk" VerticalAlignment="Top" Width="120" BorderBrush="#FF202125" Foreground="Black" SelectionTextBrush="White" TextAlignment="Center" IsReadOnly="True" Cursor="Arrow" Height="18" Background="#FF8FDEFF"/>
+        <TextBox x:Name="tulottbek" HorizontalAlignment="Left" Margin="656,112,0,0" TextWrapping="Wrap" Text="Tulot / edeltävä kk" VerticalAlignment="Top" Width="120" BorderBrush="#FF202125" Foreground="Black" SelectionTextBrush="White" TextAlignment="Center" IsReadOnly="True" Cursor="Arrow" Height="18" Background="#FF8FDEFF"/>
         <Rectangle x:Name="alempi" HorizontalAlignment="Center" Height="259" Margin="0,143,0,0" Stroke="Black" VerticalAlignment="Top" Width="780" Grid.RowSpan="4">
             <Rectangle.Fill>
                 <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
-                    <GradientStop Color="#FF052542"/>
-                    <GradientStop Color="#FFA2A2A2" Offset="1"/>
+                    <GradientStop Color="#FF00B3FF" Offset="1"/>
+                    <GradientStop Color="#FFD8EAFF" Offset="0"/>
                 </LinearGradientBrush>
             </Rectangle.Fill>
         </Rectangle>
-        <TextBlock x:Name="menotV" HorizontalAlignment="Center" Margin="0,157,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="176" Height="28" Background="#FFCCCCCC" FontSize="20" TextAlignment="Center" Grid.RowSpan="2"/>
-        <TextBlock x:Name="tulotV" HorizontalAlignment="Center" Margin="0,31,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="176" Height="28" Background="#FFCCCCCC" FontSize="20" TextAlignment="Center" Grid.Row="1"/>
-        <TextBox x:Name="tulottbKK_Copy" HorizontalAlignment="Left" Margin="164,36,0,0" TextWrapping="Wrap" Text="Tulot / vuosi" VerticalAlignment="Top" Width="120" BorderBrush="#FF202125" Foreground="Black" SelectionTextBrush="White" TextAlignment="Center" IsReadOnly="True" Cursor="Arrow" Grid.Row="1" Height="18"/>
-        <TextBox x:Name="menotb_Copy" HorizontalAlignment="Left" Margin="164,162,0,0" TextWrapping="Wrap" Text="Menot / vuosi" VerticalAlignment="Top" Width="120" BorderBrush="#FF202125" Foreground="Black" SelectionTextBrush="White" BorderThickness="1,1,1,1" TextAlignment="Center" IsReadOnly="True" Cursor="Arrow" Grid.RowSpan="2" Height="18"/>
-        <TextBox Text="Kuukaudet" HorizontalAlignment="Center" Margin="0,47,0,0" VerticalAlignment="Top" Grid.Row="2" Height="20" Width="100" TextAlignment="Center" IsReadOnly="True"/>
-        <Button x:Name="tammiKK" Content="Tammikuu" HorizontalAlignment="Left" Margin="24,5,0,0" VerticalAlignment="Top" Width="67" Grid.Row="3" Height="20" Click="KK_Click"/>
-        <Button x:Name="maalisKK" Content="Maaliskuu" HorizontalAlignment="Left" Margin="153,5,0,0" VerticalAlignment="Top" Width="62" Grid.Row="3" Height="20" Click="KK_Click"/>
-        <Button x:Name="helmiKK" Content="Helmikuu" HorizontalAlignment="Left" Margin="91,5,0,0" VerticalAlignment="Top" Width="62" Grid.Row="3" Height="20" Click="KK_Click"/>
-        <Button x:Name="toukoKK" Content="Toukokuu" HorizontalAlignment="Left" Margin="277,5,0,0" VerticalAlignment="Top" Width="62" Grid.Row="3" Height="20" Click="KK_Click"/>
-        <Button x:Name="huhtiKK" Content="Huhtikuu" HorizontalAlignment="Left" Margin="215,5,0,0" VerticalAlignment="Top" Width="62" Grid.Row="3" Height="20" Click="KK_Click"/>
-        <Button x:Name="kesaKK" Content="Kesäkuu" HorizontalAlignment="Left" Margin="339,5,0,0" VerticalAlignment="Top" Width="62" Grid.Row="3" Height="20" Click="KK_Click"/>
-        <Button x:Name="heinaKK" Content="Heinäkuu" HorizontalAlignment="Left" Margin="401,5,0,0" VerticalAlignment="Top" Width="62" Grid.Row="3" Height="20" Click="KK_Click"/>
-        <Button x:Name="eloKK" Content="Elokuu" HorizontalAlignment="Left" Margin="463,5,0,0" VerticalAlignment="Top" Width="62" Grid.Row="3" Height="20" Click="KK_Click"/>
-        <Button x:Name="syysKK" Content="Syyskuu" HorizontalAlignment="Left" Margin="525,5,0,0" VerticalAlignment="Top" Width="62" Grid.Row="3" Height="20" Click="KK_Click"/>
-        <Button x:Name="lokaKK" Content="Lokakuu" HorizontalAlignment="Left" Margin="587,5,0,0" VerticalAlignment="Top" Width="62" Grid.Row="3" Height="20" Click="KK_Click"/>
-        <Button x:Name="marrasKK" Content="Marraskuu" HorizontalAlignment="Left" Margin="649,5,0,0" VerticalAlignment="Top" Width="62" Grid.Row="3" Height="20" Click="KK_Click"/>
-        <Button x:Name="jouluKK" Content="Joulukuu" HorizontalAlignment="Left" Margin="711,5,0,0" VerticalAlignment="Top" Width="65" Grid.Row="3" RenderTransformOrigin="0.566,0.624" Height="20" Click="KK_Click"/>
-        <Button x:Name="nollaaButton" Content="Nollaa" HorizontalAlignment="Left" Margin="10,46,0,0" VerticalAlignment="Top" Width="67" Grid.Row="3" Height="20" Background="#FF121111" Foreground="#FFFFF8F8" Click="nollaaButton_Click" />
+        <TextBlock x:Name="menotV" HorizontalAlignment="Center" Margin="0,157,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="176" Height="28" Background="#FFC3C3C3" FontSize="20" TextAlignment="Center" Grid.RowSpan="2" Foreground="White"/>
+        <TextBlock x:Name="tulotV" HorizontalAlignment="Center" Margin="0,31,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="176" Height="28" Background="#FFC3C3C3" FontSize="20" TextAlignment="Center" Grid.Row="1" Foreground="White"/>
+        <TextBox x:Name="tulottbKK_Copy" HorizontalAlignment="Left" Margin="164,36,0,0" TextWrapping="Wrap" Text="Tulot / vuosi" VerticalAlignment="Top" Width="120" BorderBrush="#FF202125" Foreground="Black" SelectionTextBrush="White" TextAlignment="Center" IsReadOnly="True" Cursor="Arrow" Grid.Row="1" Height="18" Background="#FF8FDEFF"/>
+        <TextBox x:Name="menotb_Copy" HorizontalAlignment="Left" Margin="164,162,0,0" TextWrapping="Wrap" Text="Menot / vuosi" VerticalAlignment="Top" Width="120" BorderBrush="#FF202125" Foreground="Black" SelectionTextBrush="White" BorderThickness="1,1,1,1" TextAlignment="Center" IsReadOnly="True" Cursor="Arrow" Grid.RowSpan="2" Height="18" Background="#FF8FDEFF"/>
+        <TextBox Text="Kuukaudet" HorizontalAlignment="Center" Margin="0,47,0,0" VerticalAlignment="Top" Grid.Row="2" Height="20" Width="100" TextAlignment="Center" IsReadOnly="True" Background="#FF8FDEFF"/>
+        <Button x:Name="tammiKK" Content="Tammikuu" HorizontalAlignment="Left" Margin="24,5,0,0" VerticalAlignment="Top" Width="67" Grid.Row="3" Height="20" Click="KK_Click" Background="#FF7AE2B5"/>
+        <Button x:Name="maalisKK" Content="Maaliskuu" HorizontalAlignment="Left" Margin="153,5,0,0" VerticalAlignment="Top" Width="62" Grid.Row="3" Height="20" Click="KK_Click" Background="#FF30CBFF"/>
+        <Button x:Name="helmiKK" Content="Helmikuu" HorizontalAlignment="Left" Margin="91,5,0,0" VerticalAlignment="Top" Width="62" Grid.Row="3" Height="20" Click="KK_Click" Background="#FF41E5F1"/>
+        <Button x:Name="toukoKK" Content="Toukokuu" HorizontalAlignment="Left" Margin="277,5,0,0" VerticalAlignment="Top" Width="62" Grid.Row="3" Height="20" Click="KK_Click" Background="#FF55A6FF"/>
+        <Button x:Name="huhtiKK" Content="Huhtikuu" HorizontalAlignment="Left" Margin="215,5,0,0" VerticalAlignment="Top" Width="62" Grid.Row="3" Height="20" Click="KK_Click" Background="#FF6AB1FF"/>
+        <Button x:Name="kesaKK" Content="Kesäkuu" HorizontalAlignment="Left" Margin="339,5,0,0" VerticalAlignment="Top" Width="62" Grid.Row="3" Height="20" Click="KK_Click" Background="#FF84A2FF"/>
+        <Button x:Name="heinaKK" Content="Heinäkuu" HorizontalAlignment="Left" Margin="401,5,0,0" VerticalAlignment="Top" Width="62" Grid.Row="3" Height="20" Click="KK_Click" Background="#FFD0ABFF"/>
+        <Button x:Name="eloKK" Content="Elokuu" HorizontalAlignment="Left" Margin="463,5,0,0" VerticalAlignment="Top" Width="62" Grid.Row="3" Height="20" Click="KK_Click" Background="#FFEFBDFF"/>
+        <Button x:Name="syysKK" Content="Syyskuu" HorizontalAlignment="Left" Margin="525,5,0,0" VerticalAlignment="Top" Width="62" Grid.Row="3" Height="20" Click="KK_Click" Background="#FFEBACFF"/>
+        <Button x:Name="lokaKK" Content="Lokakuu" HorizontalAlignment="Left" Margin="587,5,0,0" VerticalAlignment="Top" Width="62" Grid.Row="3" Height="20" Click="KK_Click" Background="#FFFFA5A5"/>
+        <Button x:Name="marrasKK" Content="Marraskuu" HorizontalAlignment="Left" Margin="649,5,0,0" VerticalAlignment="Top" Width="62" Grid.Row="3" Height="20" Click="KK_Click" Background="#FFFF9398"/>
+        <Button x:Name="jouluKK" Content="Joulukuu" HorizontalAlignment="Left" Margin="711,5,0,0" VerticalAlignment="Top" Width="65" Grid.Row="3" RenderTransformOrigin="0.566,0.624" Height="20" Click="KK_Click" Background="#FFF1A46E"/>
+        <Button x:Name="nollaaButton" Content="Nollaa" HorizontalAlignment="Left" Margin="23,0,0,0" VerticalAlignment="Center" Width="68" Grid.Row="3" Height="20" Background="#FF484848" Click="nollaaButton_Click" >
+            <Button.Foreground>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="#FFA4A4A4" Offset="1"/>
+                    <GradientStop Color="White" Offset="0"/>
+                    <GradientStop Color="White" Offset="0.667"/>
+                </LinearGradientBrush>
+            </Button.Foreground>
+        </Button>
         <TextBlock x:Name="Tammikuu" HorizontalAlignment="Left" Margin="50,72,0,0" Grid.Row="2" TextWrapping="Wrap" VerticalAlignment="Top" Foreground="Red" TextAlignment="Center" Background="#33FFFFFF"/>
         <TextBlock x:Name="Helmikuu" HorizontalAlignment="Left" Margin="114,72,0,0" Grid.Row="2" TextWrapping="Wrap" VerticalAlignment="Top" Foreground="Red" TextAlignment="Center" Background="#33FFFFFF"/>
         <TextBlock x:Name="Maaliskuu" HorizontalAlignment="Left" Margin="176,72,0,0" Grid.Row="2" TextWrapping="Wrap" VerticalAlignment="Top" Foreground="Red" TextAlignment="Center" Background="#33FFFFFF"/>
@@ -112,6 +81,23 @@
         <TextBlock x:Name="Lokakuu" HorizontalAlignment="Left" Margin="608,72,0,0" Grid.Row="2" TextWrapping="Wrap" VerticalAlignment="Top" Foreground="Red" TextAlignment="Center" Background="#33FFFFFF"/>
         <TextBlock x:Name="Marraskuu" HorizontalAlignment="Left" Margin="672,72,0,0" Grid.Row="2" TextWrapping="Wrap" VerticalAlignment="Top" Foreground="Red" TextAlignment="Center" Background="#33FFFFFF"/>
         <TextBlock x:Name="Joulukuu" HorizontalAlignment="Left" Margin="736,72,0,0" Grid.Row="2" TextWrapping="Wrap" VerticalAlignment="Top" Foreground="Red" TextAlignment="Center" Background="#33FFFFFF"/>
+        <TextBlock x:Name="budjettilaskuri" HorizontalAlignment="Center" Margin="0,10,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="800" RenderTransformOrigin="0.5,0.5" Height="42" Background="#FF00B3FF" FontSize="36" TextAlignment="Center" LineHeight="NaN" FontFamily="Eras ITC">
+            <TextBlock.Foreground>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="#FF00B3FF" Offset="0"/>
+                    <GradientStop Color="White" Offset="0.957"/>
+                    <GradientStop Color="White" Offset="0.043"/>
+                    <GradientStop Color="#FF00B3FF" Offset="0.987"/>
+                </LinearGradientBrush>
+            </TextBlock.Foreground>
+            <TextBlock.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform Angle="-0.006"/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </TextBlock.RenderTransform><Run Language="fi-fi" Text="BUDJETTILASKURI"/></TextBlock>
 
 
     </Grid>

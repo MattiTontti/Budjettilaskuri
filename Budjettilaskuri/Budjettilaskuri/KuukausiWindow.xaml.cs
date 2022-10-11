@@ -170,6 +170,8 @@ namespace Budjettilaskuri
         private void toistuvaCheck_Checked(object sender, RoutedEventArgs e)
         {
             MainWindow.vuosi.ToistuvaMeno((Meno)comboBox.SelectedItem);
+            {
+}
         }
 
         private void toistuvaCheck2_Checked(object sender, RoutedEventArgs e)

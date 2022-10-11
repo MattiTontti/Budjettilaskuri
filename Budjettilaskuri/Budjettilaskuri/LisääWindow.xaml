@@ -7,14 +7,21 @@
         mc:Ignorable="d"
         Title="LisääWindow" Height="250" Width="400" Closing="Window_Closing">
     <Grid>
-        <Label Content="Nimi:" HorizontalAlignment="Left" Margin="95,86,0,0" VerticalAlignment="Top"/>
-        <Label Content="Määrä:" HorizontalAlignment="Left" Margin="225,86,0,0" VerticalAlignment="Top"/>
+        <Grid.Background>
+            <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                <GradientStop Color="#FF00B3FF" Offset="1"/>
+                <GradientStop Color="White" Offset="0"/>
+            </LinearGradientBrush>
+        </Grid.Background>
+        <Label Content="Nimi:" HorizontalAlignment="Left" Margin="95,93,0,0" VerticalAlignment="Top" Foreground="Black"/>
+        <Label Content="Määrä:" HorizontalAlignment="Left" Margin="225,93,0,0" VerticalAlignment="Top"/>
         <TextBox x:Name="nimiText" HorizontalAlignment="Left" Margin="95,124,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="85"/>
         <TextBox x:Name="määräText" HorizontalAlignment="Left" Margin="225,124,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="60"/>
-        <Label Content="€" HorizontalAlignment="Left" Margin="290,120,0,0" VerticalAlignment="Top"/>
-        <Button Content="Ok" HorizontalAlignment="Left" Margin="107,179,0,0" VerticalAlignment="Top" IsDefault="True" Height="28" Width="31" Click="Button_Click"/>
-        <Button Content="Peruuta" HorizontalAlignment="Left" Margin="222,179,0,0" VerticalAlignment="Top" IsCancel="True" Height="28" Width="51"/>
-        <CheckBox x:Name="toistuvaCheck" Content="Toistuva" HorizontalAlignment="Left" Margin="159,147,0,0" VerticalAlignment="Top"/>
+        <Label Content="€" HorizontalAlignment="Left" Margin="285,117,0,0" VerticalAlignment="Top" Foreground="#FF0F8811" Height="45" Width="21" FontSize="14" RenderTransformOrigin="0.38,0.609"/>
+        <Button Content="✓" HorizontalAlignment="Left" Margin="104,179,0,0" VerticalAlignment="Top" IsDefault="True" Height="28" Width="66" Click="Button_Click" Background="#FF5CDB5C" FontSize="18" Foreground="White" RenderTransformOrigin="0.52,0.676"/>
+        <Button Content="Peruuta" HorizontalAlignment="Left" Margin="230,179,0,0" VerticalAlignment="Top" IsCancel="True" Height="28" Width="50" Background="#FFFF0021"/>
+        <CheckBox x:Name="toistuvaCheck" Content="Toistuva" HorizontalAlignment="Center" Margin="0,147,0,0" VerticalAlignment="Top"/>
+        <TextBlock x:Name="budjettilaskuri" HorizontalAlignment="Center" TextWrapping="Wrap" VerticalAlignment="Top" Width="400" RenderTransformOrigin="0.5,0.5" Height="42" Background="#FF00B3FF" FontSize="36" TextAlignment="Center" LineHeight="NaN" FontFamily="Eras ITC" Foreground="White"><Run Language="fi-fi" Text="LISÄYS"/></TextBlock>
 
     </Grid>
 </Window>
