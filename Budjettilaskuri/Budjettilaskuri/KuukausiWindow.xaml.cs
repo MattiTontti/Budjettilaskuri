@@ -74,7 +74,7 @@ namespace Budjettilaskuri
                 {
                     poistaMenoButton.Visibility = Visibility.Hidden;
                 }
-                if ((comboBox.SelectedItem as Meno).Nimi == "Vedenkulutus")
+                if ((comboBox.SelectedItem as Meno).Nimi == "Vesi")
                 {
                     laskeVedenkulutus.Visibility = Visibility.Visible;
                 }
