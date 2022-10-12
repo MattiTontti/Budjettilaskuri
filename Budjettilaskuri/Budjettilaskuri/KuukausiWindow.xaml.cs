@@ -192,6 +192,11 @@ namespace Budjettilaskuri
                 comboBox2.ItemsSource = kuukausi.Tulot;
                 comboBox2.SelectedIndex = kuukausi.Tulot.Count - 1;
 
+                if ((comboBox2.SelectedItem as Tulo).Toistuva)
+                {
+                    MainWindow.vuosi.ToistuvaTulo((Tulo)comboBox2.SelectedItem);
+                }
+
                 kokoTulot.Text = kuukausi.KokoTulot().ToString() + " €";
             }
         }

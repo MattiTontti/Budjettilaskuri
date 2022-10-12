@@ -69,18 +69,18 @@
                 </LinearGradientBrush>
             </Button.Foreground>
         </Button>
-        <TextBlock x:Name="Tammikuu" HorizontalAlignment="Left" Margin="50,72,0,0" Grid.Row="2" TextWrapping="Wrap" VerticalAlignment="Top" Foreground="Red" TextAlignment="Center" Background="#33FFFFFF"/>
-        <TextBlock x:Name="Helmikuu" HorizontalAlignment="Left" Margin="114,72,0,0" Grid.Row="2" TextWrapping="Wrap" VerticalAlignment="Top" Foreground="Red" TextAlignment="Center" Background="#33FFFFFF"/>
-        <TextBlock x:Name="Maaliskuu" HorizontalAlignment="Left" Margin="176,72,0,0" Grid.Row="2" TextWrapping="Wrap" VerticalAlignment="Top" Foreground="Red" TextAlignment="Center" Background="#33FFFFFF"/>
-        <TextBlock x:Name="Huhtikuu" HorizontalAlignment="Left" Margin="238,72,0,0" Grid.Row="2" TextWrapping="Wrap" VerticalAlignment="Top" Foreground="Red" TextAlignment="Center" Background="#33FFFFFF"/>
-        <TextBlock x:Name="Toukokuu" HorizontalAlignment="Left" Margin="300,72,0,0" Grid.Row="2" TextWrapping="Wrap" VerticalAlignment="Top" Foreground="Red" TextAlignment="Center" Background="#33FFFFFF"/>
-        <TextBlock x:Name="Kesäkuu" HorizontalAlignment="Left" Margin="362,72,0,0" Grid.Row="2" TextWrapping="Wrap" VerticalAlignment="Top" Foreground="Red" TextAlignment="Center" Background="#33FFFFFF"/>
-        <TextBlock x:Name="Heinäkuu" HorizontalAlignment="Left" Margin="424,72,0,0" Grid.Row="2" TextWrapping="Wrap" VerticalAlignment="Top" Foreground="Red" TextAlignment="Center" Background="#33FFFFFF"/>
-        <TextBlock x:Name="Elokuu" HorizontalAlignment="Left" Margin="486,72,0,0" Grid.Row="2" TextWrapping="Wrap" VerticalAlignment="Top" Foreground="Red" TextAlignment="Center" Background="#33FFFFFF"/>
-        <TextBlock x:Name="Syyskuu" HorizontalAlignment="Left" Margin="548,72,0,0" Grid.Row="2" TextWrapping="Wrap" VerticalAlignment="Top" Foreground="Red" TextAlignment="Center" Background="#33FFFFFF"/>
-        <TextBlock x:Name="Lokakuu" HorizontalAlignment="Left" Margin="608,72,0,0" Grid.Row="2" TextWrapping="Wrap" VerticalAlignment="Top" Foreground="Red" TextAlignment="Center" Background="#33FFFFFF"/>
-        <TextBlock x:Name="Marraskuu" HorizontalAlignment="Left" Margin="672,72,0,0" Grid.Row="2" TextWrapping="Wrap" VerticalAlignment="Top" Foreground="Red" TextAlignment="Center" Background="#33FFFFFF"/>
-        <TextBlock x:Name="Joulukuu" HorizontalAlignment="Left" Margin="736,72,0,0" Grid.Row="2" TextWrapping="Wrap" VerticalAlignment="Top" Foreground="Red" TextAlignment="Center" Background="#33FFFFFF"/>
+        <TextBlock x:Name="Tammikuu" HorizontalAlignment="Left" Margin="45,72,0,0" Grid.Row="2" TextWrapping="Wrap" VerticalAlignment="Top" Foreground="Red" TextAlignment="Center" Background="#33FFFFFF"/>
+        <TextBlock x:Name="Helmikuu" HorizontalAlignment="Left" Margin="109,72,0,0" Grid.Row="2" TextWrapping="Wrap" VerticalAlignment="Top" Foreground="Red" TextAlignment="Center" Background="#33FFFFFF"/>
+        <TextBlock x:Name="Maaliskuu" HorizontalAlignment="Left" Margin="171,72,0,0" Grid.Row="2" TextWrapping="Wrap" VerticalAlignment="Top" Foreground="Red" TextAlignment="Center" Background="#33FFFFFF"/>
+        <TextBlock x:Name="Huhtikuu" HorizontalAlignment="Left" Margin="233,72,0,0" Grid.Row="2" TextWrapping="Wrap" VerticalAlignment="Top" Foreground="Red" TextAlignment="Center" Background="#33FFFFFF"/>
+        <TextBlock x:Name="Toukokuu" HorizontalAlignment="Left" Margin="295,72,0,0" Grid.Row="2" TextWrapping="Wrap" VerticalAlignment="Top" Foreground="Red" TextAlignment="Center" Background="#33FFFFFF"/>
+        <TextBlock x:Name="Kesäkuu" HorizontalAlignment="Left" Margin="357,72,0,0" Grid.Row="2" TextWrapping="Wrap" VerticalAlignment="Top" Foreground="Red" TextAlignment="Center" Background="#33FFFFFF"/>
+        <TextBlock x:Name="Heinäkuu" HorizontalAlignment="Left" Margin="419,72,0,0" Grid.Row="2" TextWrapping="Wrap" VerticalAlignment="Top" Foreground="Red" TextAlignment="Center" Background="#33FFFFFF"/>
+        <TextBlock x:Name="Elokuu" HorizontalAlignment="Left" Margin="481,72,0,0" Grid.Row="2" TextWrapping="Wrap" VerticalAlignment="Top" Foreground="Red" TextAlignment="Center" Background="#33FFFFFF"/>
+        <TextBlock x:Name="Syyskuu" HorizontalAlignment="Left" Margin="543,72,0,0" Grid.Row="2" TextWrapping="Wrap" VerticalAlignment="Top" Foreground="Red" TextAlignment="Center" Background="#33FFFFFF"/>
+        <TextBlock x:Name="Lokakuu" HorizontalAlignment="Left" Margin="603,72,0,0" Grid.Row="2" TextWrapping="Wrap" VerticalAlignment="Top" Foreground="Red" TextAlignment="Center" Background="#33FFFFFF"/>
+        <TextBlock x:Name="Marraskuu" HorizontalAlignment="Left" Margin="667,72,0,0" Grid.Row="2" TextWrapping="Wrap" VerticalAlignment="Top" Foreground="Red" TextAlignment="Center" Background="#33FFFFFF"/>
+        <TextBlock x:Name="Joulukuu" HorizontalAlignment="Left" Margin="731,72,0,0" Grid.Row="2" TextWrapping="Wrap" VerticalAlignment="Top" Foreground="Red" TextAlignment="Center" Background="#33FFFFFF"/>
         <TextBlock x:Name="budjettilaskuri" HorizontalAlignment="Center" Margin="0,10,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="800" RenderTransformOrigin="0.5,0.5" Height="42" Background="#FF00B3FF" FontSize="36" TextAlignment="Center" LineHeight="NaN" FontFamily="Eras ITC">
             <TextBlock.Foreground>
                 <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
