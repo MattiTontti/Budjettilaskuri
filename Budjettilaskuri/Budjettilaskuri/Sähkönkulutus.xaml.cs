@@ -30,6 +30,7 @@ namespace Budjettilaskuri
         private void Skulutus_TextChanged(object sender, TextChangedEventArgs e)
         {
             double määrä;
+
             if (double.TryParse(kWh.Text, out määrä))
             {
                 KulutusMäärä = määrä;
@@ -40,6 +41,7 @@ namespace Budjettilaskuri
         private void SyötäKäyttöM_TextChanged(object sender, TextChangedEventArgs e)
         {
             double määrä;
+
             if (double.TryParse(SyötäKäyttöM.Text, out määrä))
             {
                 KäyttöMäärä = määrä;
@@ -50,6 +52,7 @@ namespace Budjettilaskuri
         private void SyötäSiirtoM_TextChanged(object sender, TextChangedEventArgs e)
         {
             double määrä;
+
             if (double.TryParse(SyötäSiirtoM.Text, out määrä))
             {
                 SiirtoMäärä = määrä;

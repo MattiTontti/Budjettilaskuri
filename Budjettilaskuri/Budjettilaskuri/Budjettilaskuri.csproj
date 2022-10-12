@@ -7,12 +7,4 @@
     <UseWPF>true</UseWPF>
   </PropertyGroup>
 
-  <ItemGroup>
-    <None Remove="technology-data-binary-code-network-conveying-connectivity_34629-796.jpg" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <Resource Include="technology-data-binary-code-network-conveying-connectivity_34629-796.jpg" />
-  </ItemGroup>
-
 </Project>

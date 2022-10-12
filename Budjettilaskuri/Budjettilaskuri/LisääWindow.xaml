@@ -17,7 +17,7 @@
         <Label Content="Määrä:" HorizontalAlignment="Left" Margin="225,93,0,0" VerticalAlignment="Top"/>
         <TextBox x:Name="nimiText" HorizontalAlignment="Left" Margin="95,124,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="85"/>
         <TextBox x:Name="määräText" HorizontalAlignment="Left" Margin="225,124,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="60"/>
-        <Label Content="€" HorizontalAlignment="Left" Margin="285,117,0,0" VerticalAlignment="Top" Foreground="#FF0F8811" Height="45" Width="21" FontSize="14" RenderTransformOrigin="0.38,0.609"/>
+        <Label Content="€" HorizontalAlignment="Left" Margin="285,117,0,0" VerticalAlignment="Top" Foreground="Black" Height="45" Width="21" FontSize="14" RenderTransformOrigin="0.38,0.609"/>
         <Button Content="✓" HorizontalAlignment="Left" Margin="104,179,0,0" VerticalAlignment="Top" IsDefault="True" Height="28" Width="66" Click="Button_Click" Background="#FF5CDB5C" FontSize="18" Foreground="White" RenderTransformOrigin="0.52,0.676"/>
         <Button Content="Peruuta" HorizontalAlignment="Left" Margin="230,179,0,0" VerticalAlignment="Top" IsCancel="True" Height="28" Width="50" Background="#FFCC001A" Foreground="White"/>
         <CheckBox x:Name="toistuvaCheck" Content="Toistuva" HorizontalAlignment="Center" Margin="0,147,0,0" VerticalAlignment="Top"/>

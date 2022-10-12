@@ -12,10 +12,9 @@ namespace Budjettilaskuri
         public double Määrä { get; set; }
         public bool Toistuva { get; set; } = false;
         public bool Poistettava { get; set; } = true;
-        public Raha()
-        {
 
-        }
+        public Raha() { }
+
         public Raha(string nimi, double määrä)
         {
             Nimi = nimi;

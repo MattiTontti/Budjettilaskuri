@@ -25,6 +25,7 @@ namespace Budjettilaskuri
     public partial class MainWindow : Window
     {
         public static Vuosi vuosi = new Vuosi();
+
         public MainWindow()
         {
             InitializeComponent();
@@ -33,6 +34,7 @@ namespace Budjettilaskuri
             {
                 vuosi = JsonSerializer.Deserialize<Vuosi>(File.ReadAllText("vuosi.json"));
             }
+
             Kuukausi_Check();
             KuukausiMäärä_Kaikki();
         }
@@ -51,8 +53,8 @@ namespace Budjettilaskuri
         private void KuukausiMäärä_Check(TextBlock Kuukausi)
         {
             string s = vuosi.Kuukaudet[vuosi.Kuukaudet.IndexOf(vuosi.HaeKuukausi(Kuukausi.Name))].Erotus();
-
             Kuukausi.Text = s;
+
             if (s[0] == '-')
             {
                 Kuukausi.Foreground = Brushes.Red;
@@ -89,6 +91,7 @@ namespace Budjettilaskuri
         private void KK_Click(object sender, RoutedEventArgs e)
         {
             int num = -1;
+
             switch((sender as Button).Content)
             {
                 case "Tammikuu":
@@ -117,6 +120,7 @@ namespace Budjettilaskuri
                     num = 11; break;
 
             }
+
             KuukausiWindow kkwindow = new KuukausiWindow(vuosi.Kuukaudet[num]);
             kkwindow.ShowDialog();
             Kuukausi_Check();
@@ -126,6 +130,7 @@ namespace Budjettilaskuri
         private void nollaaButton_Click(object sender, RoutedEventArgs e)
         {
             var m = MessageBox.Show("Haluatko varmasti nollata budjetin?", "Nollaa budjetti", MessageBoxButton.YesNo, MessageBoxImage.Question);
+
             if (m == MessageBoxResult.Yes)
             {
                 vuosi = new Vuosi();

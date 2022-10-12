@@ -14,10 +14,9 @@ namespace Budjettilaskuri
         public List<Tulo> Tulot { get; set; } = new List<Tulo>();
         public string Nimi { get; set; }
         public double Vedenkulutus { get; set; }
-        public Kuukausi()
-        {
 
-        }
+        public Kuukausi() { }
+
         public Kuukausi(int numero)
         {
             switch (numero)
@@ -36,18 +35,23 @@ namespace Budjettilaskuri
                 case 12: Nimi = "Joulukuu"; break;
                 default: Nimi = ""; break;
             }
+
             Meno vuokralaina = new Meno("Vuokra / laina", 0);
             vuokralaina.Poistettava = false;
             LisääMeno(vuokralaina);
+
             Meno sähkö = new Meno("Sähkö", 0);
             sähkö.Poistettava = false;
             LisääMeno(sähkö);
+
             Meno vesi = new Meno("Vesi", 0);
             vesi.Poistettava = false;
             LisääMeno(vesi);
+
             Meno ruoka = new Meno("Ruoka", 0);
             ruoka.Poistettava = false;
             LisääMeno(ruoka);
+
             Meno matkakulut = new Meno("Matkakulut", 0);
             matkakulut.Poistettava = false;
             LisääMeno(matkakulut);
@@ -59,10 +63,12 @@ namespace Budjettilaskuri
         internal double KokoMenot()
         {
             double d = 0;
+
             foreach (Meno m in Menot)
             {
                 d += m.Määrä;
             }
+
             return Math.Round(d, 2);
         }
         /// <summary>
@@ -72,10 +78,12 @@ namespace Budjettilaskuri
         internal double KokoTulot()
         {
             double d = 0;
+
             foreach (Tulo t in Tulot)
             {
                 d += t.Määrä;
             }
+
             return Math.Round(d, 2);
         }
 
@@ -87,6 +95,7 @@ namespace Budjettilaskuri
         {
             Tulot.Add(tulo);
         }
+
         /// <summary>
         /// Lisää uuden tulon
         /// </summary>
@@ -115,6 +124,7 @@ namespace Budjettilaskuri
         {
             Menot.Add(new Meno(nimi, määrä));
         }
+
         /// <summary>
         /// Laskee tulojen ja menojen erotuksen
         /// </summary>
@@ -123,13 +133,16 @@ namespace Budjettilaskuri
         {
             string s = "";
             double d = KokoTulot() - KokoMenot();
+
             if (d >= 0)
             {
                 s += "+";
             }
+
             s += d + " €";
             return s;
         }
+
         /// <summary>
         /// Muokkaa meno
         /// </summary>
@@ -172,6 +185,7 @@ namespace Budjettilaskuri
         internal bool OnkoMeno(string meno)
         {
             bool returnBool = false;
+
             foreach (Meno m in Menot)
             {
                 if (m.Nimi == meno)
@@ -180,6 +194,7 @@ namespace Budjettilaskuri
                     break;
                 }
             }
+
             return returnBool;
         }
 
@@ -191,6 +206,7 @@ namespace Budjettilaskuri
         internal bool OnkoTulo(string tulo)
         {
             bool returnBool = false;
+
             foreach (Tulo t in Tulot)
             {
                 if (t.Nimi == tulo)
@@ -199,6 +215,7 @@ namespace Budjettilaskuri
                     break;
                 }
             }
+
             return returnBool;
         }
 
@@ -210,6 +227,7 @@ namespace Budjettilaskuri
         internal Meno HaeMeno(string meno)
         {
             Meno returnMeno = new Meno();
+
             foreach (Meno m in Menot)
             {
                 if (m.Nimi == meno)
@@ -218,6 +236,7 @@ namespace Budjettilaskuri
                     break;
                 }
             }
+
             return returnMeno;
         }
 
@@ -229,6 +248,7 @@ namespace Budjettilaskuri
         internal Tulo HaeTulo(string tulo)
         {
             Tulo returnTulo = new Tulo();
+
             foreach (Tulo t in Tulot)
             {
                 if (t.Nimi == tulo)
@@ -237,6 +257,7 @@ namespace Budjettilaskuri
                     break;
                 }
             }
+
             return returnTulo;
         }
     }

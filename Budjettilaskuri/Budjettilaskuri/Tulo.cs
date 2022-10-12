@@ -9,9 +9,7 @@ namespace Budjettilaskuri
     public class Tulo : Raha
     {
         public Tulo(string nimi, double määrä) : base(nimi, määrä) { }
-        public Tulo()
-        {
 
-        }
+        public Tulo() { }
     }
 }

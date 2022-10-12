@@ -10,12 +10,11 @@ namespace Budjettilaskuri
 {
     public class Vuosi
     {
-        public int Numero { get; set; }
         public List<Kuukausi> Kuukaudet { get; set; }
-        public DateTime dt = DateTime.Now;
+        DateTime dt = DateTime.Now;
+
         public Vuosi()
         {
-            Numero = 2022;
             Kuukaudet = new List<Kuukausi>();
             for (int i = 0; i < 12; i++)
             {
@@ -23,15 +22,6 @@ namespace Budjettilaskuri
             }
         }
 
-        public Vuosi(int numero)
-        {
-            Numero = numero;
-            Kuukaudet = new List<Kuukausi>();
-            for (int i = 0; i < 12; i++)
-            {
-                Kuukaudet.Add(new Kuukausi(i + 1));
-            }
-        }
         /// <summary>
         /// Hakee nykykuukauden
         /// </summary>
@@ -40,6 +30,7 @@ namespace Budjettilaskuri
         {
             return Kuukaudet[dt.Month - 1];
         }
+
         /// <summary>
         /// Hakee edellisen kuukauden
         /// </summary>
@@ -48,6 +39,7 @@ namespace Budjettilaskuri
         {
             return Kuukaudet[dt.Month - 2];
         }
+
         /// <summary>
         /// Laskee vuoden koko menot
         /// </summary>
@@ -55,12 +47,15 @@ namespace Budjettilaskuri
         internal double KokoMenot()
         {
             double menot = 0;
+
             foreach (Kuukausi kk in Kuukaudet)
             {
                 menot += kk.KokoMenot();
             }
+
             return Math.Round(menot, 2);
         }
+
         /// <summary>
         /// Laskee vuoden koko tulot
         /// </summary>
@@ -68,12 +63,15 @@ namespace Budjettilaskuri
         internal double KokoTulot()
         {
             double tulot = 0;
+
             foreach (Kuukausi kk in Kuukaudet)
             {
                 tulot += kk.KokoTulot();
             }
+
             return Math.Round(tulot, 2);
         }
+
         /// <summary>
         /// Laskee vuoden tulojen ja menojen erotuksen
         /// </summary>
@@ -99,6 +97,7 @@ namespace Budjettilaskuri
                 {
                     kk.MuokkaaMeno(meno.Nimi, meno.Määrä);
                 }
+
                 kk.Menot[kk.Menot.IndexOf(kk.HaeMeno(meno.Nimi))].Toistuva = true;
             }
         }
@@ -119,6 +118,7 @@ namespace Budjettilaskuri
                 {
                     kk.MuokkaaTulo(tulo.Nimi, tulo.Määrä);
                 }
+
                 kk.Tulot[kk.Tulot.IndexOf(kk.HaeTulo(tulo.Nimi))].Toistuva = true;
             }
         }
@@ -142,6 +142,7 @@ namespace Budjettilaskuri
                 else
                 {
                     m.Toistuva = false;
+
                     if (Kuukaudet[i].Nimi != kuukausi.Nimi)
                     {
                         m.Määrä = 0;
@@ -169,6 +170,7 @@ namespace Budjettilaskuri
                 else
                 {
                     t.Toistuva = false;
+
                     if (Kuukaudet[i].Nimi != kuukausi.Nimi)
                     {
                         t.Määrä = 0;
@@ -177,9 +179,15 @@ namespace Budjettilaskuri
             }
         }
 
+        /// <summary>
+        /// Hakee kuukauden nimen perusteella
+        /// </summary>
+        /// <param name="kuukausi"></param>
+        /// <returns></returns>
         internal Kuukausi HaeKuukausi(string kuukausi)
         {
             Kuukausi returnKK = new Kuukausi();
+
             foreach (Kuukausi kk in Kuukaudet)
             {
                 if (kk.Nimi == kuukausi)
@@ -187,6 +195,7 @@ namespace Budjettilaskuri
                     returnKK = kk;
                 }
             }
+
             return returnKK;
         }
     }

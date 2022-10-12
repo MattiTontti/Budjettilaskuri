@@ -22,6 +22,7 @@ namespace Budjettilaskuri
         public double VesiKKKMäärä;
         public double EdellKKKMäärä;
         Kuukausi kk;
+
         public Vedenkulutus(Kuukausi kuukausi, Kuukausi edelkuukausi)
         {
             InitializeComponent();
@@ -42,6 +43,7 @@ namespace Budjettilaskuri
         private void VesiKKK_TextChanged(object sender, TextChangedEventArgs e)
         {
             double määrä;
+
             if (double.TryParse(VesiKKK.Text, out määrä))
             {
                 VesiKKKMäärä = määrä;
@@ -53,6 +55,7 @@ namespace Budjettilaskuri
         private void EdellKKK_TextChanged(object sender, TextChangedEventArgs e)
         {
             double määrä;
+
             if (double.TryParse(EdellKKK.Text, out määrä))
             {
                 EdellKKKMäärä = määrä;

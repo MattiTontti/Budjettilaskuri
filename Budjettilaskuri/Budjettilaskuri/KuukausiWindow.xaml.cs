@@ -21,15 +21,21 @@ namespace Budjettilaskuri
     /// </summary>
     public partial class KuukausiWindow : Window
     {
-        public Kuukausi kuukausi;
+        public static Kuukausi kuukausi = new Kuukausi();
+        public bool addcheck = false;
+        int kkluku = MainWindow.vuosi.Kuukaudet.IndexOf(MainWindow.vuosi.HaeKuukausi(kuukausi.Nimi));
+
         public KuukausiWindow(Kuukausi kk)
         {
-            kuukausi = kk;
             InitializeComponent();
+
+            kuukausi = kk;
             Title = kk.Nimi;
             Kuukausittaisetkjm.Text = $"{kk.Nimi.ToUpper()}N KULUT JA MENOT";
+
             comboBox.ItemsSource = kuukausi.Menot;
             comboBox2.ItemsSource = kuukausi.Tulot;
+
             kokoMenot.Text = kuukausi.KokoMenot().ToString() + " €";
             kokoTulot.Text = kuukausi.KokoTulot().ToString() + " €";
 
@@ -58,9 +64,11 @@ namespace Budjettilaskuri
         private void comboBox_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
             toistuvaCheck.IsChecked = false;
+
             if (comboBox.SelectedItem is Meno)
             {
                 menotBox.Text = (comboBox.SelectedItem as Meno).Määrä.ToString();
+
                 if ((comboBox.SelectedItem as Meno).Toistuva)
                 {
                     toistuvaCheck.IsChecked = true;
@@ -93,15 +101,16 @@ namespace Budjettilaskuri
                     laskeSähkönhinta.Visibility = Visibility.Hidden;
                 }
             }
-
         }
 
         private void comboBox2_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
             toistuvaCheck2.IsChecked = false;
+
             if (comboBox2.SelectedItem is Tulo)
             {
                 tulotBox.Text = (comboBox2.SelectedItem as Tulo).Määrä.ToString();
+
                 if ((comboBox2.SelectedItem as Tulo).Toistuva)
                 {
                     toistuvaCheck2.IsChecked = true;
@@ -116,6 +125,7 @@ namespace Budjettilaskuri
                     poistaTuloButton.Visibility = Visibility.Hidden;
                 }
             }
+
             if (comboBox2.SelectedItem == null)
             {
                 poistaTuloButton.Visibility = Visibility.Hidden;
@@ -125,6 +135,7 @@ namespace Budjettilaskuri
         private void menotBox_TextChanged(object sender, TextChangedEventArgs e)
         {
             double määrä;
+
             if (double.TryParse(menotBox.Text, out määrä) && comboBox.SelectedItem != null)
             {
                 kuukausi.MuokkaaMeno(comboBox.SelectedItem.ToString(), määrä);
@@ -139,16 +150,19 @@ namespace Budjettilaskuri
             {
                 MainWindow.vuosi.ToistuvaMeno((Meno)comboBox.SelectedItem);
             }
+
             kokoMenot.Text = kuukausi.KokoMenot().ToString() + " €";
         }
-        public bool addcheck = false;
+
         private void lisääMeno_Click(object sender, RoutedEventArgs e)
         {
             LisääWindow window = new LisääWindow(kuukausi, 0);
             window.ShowDialog();
+
             if (window.bcheck)
             {
                 kuukausi.LisääMeno(window.meno);
+
                 comboBox.ItemsSource = new List<string>();
                 comboBox.ItemsSource = kuukausi.Menot;
                 comboBox.SelectedIndex = kuukausi.Menot.Count - 1;
@@ -157,6 +171,7 @@ namespace Budjettilaskuri
                 {
                     MainWindow.vuosi.ToistuvaMeno((Meno)comboBox.SelectedItem);
                 }
+
                 kokoMenot.Text = kuukausi.KokoMenot().ToString() + " €";
             }
         }
@@ -165,15 +180,18 @@ namespace Budjettilaskuri
         {
             LisääWindow window = new LisääWindow(kuukausi, 1);
             window.ShowDialog();
+
             if (window.bcheck)
             {
                 kuukausi.LisääTulo(window.tulo);
+
                 comboBox2.ItemsSource = new List<string>();
                 comboBox2.IsEnabled = true;
                 toistuvaCheck2.IsEnabled = true;
                 tulotBox.IsEnabled = true;
                 comboBox2.ItemsSource = kuukausi.Tulot;
                 comboBox2.SelectedIndex = kuukausi.Tulot.Count - 1;
+
                 kokoTulot.Text = kuukausi.KokoTulot().ToString() + " €";
             }
         }
@@ -181,6 +199,7 @@ namespace Budjettilaskuri
         private void tulotBox_TextChanged(object sender, TextChangedEventArgs e)
         {
             double määrä;
+
             if (double.TryParse(tulotBox.Text, out määrä) && comboBox2.SelectedItem != null)
             {
                 kuukausi.MuokkaaTulo(comboBox2.SelectedItem.ToString(), määrä);
@@ -195,45 +214,19 @@ namespace Budjettilaskuri
             {
                 MainWindow.vuosi.ToistuvaTulo((Tulo)comboBox2.SelectedItem);
             }
+
             kokoTulot.Text = kuukausi.KokoTulot().ToString() + " €";
-        }
-
-        private void toistuvaCheck_Checked(object sender, RoutedEventArgs e)
-        {
-            MainWindow.vuosi.ToistuvaMeno((Meno)comboBox.SelectedItem);
-            {
-}
-        }
-
-        private void toistuvaCheck2_Checked(object sender, RoutedEventArgs e)
-        {
-            MainWindow.vuosi.ToistuvaTulo((Tulo)comboBox2.SelectedItem);
-        }
-
-        private void toistuvaCheck_Unchecked(object sender, RoutedEventArgs e)
-        {
-            if (comboBox.SelectedItem != null)
-            {
-                MainWindow.vuosi.EiToistuvaMeno((Meno)comboBox.SelectedItem, MainWindow.vuosi.Kuukaudet[MainWindow.vuosi.Kuukaudet.IndexOf(MainWindow.vuosi.HaeKuukausi(kuukausi.Nimi))]);
-            }
-        }
-
-        private void toistuvaCheck2_Unchecked(object sender, RoutedEventArgs e)
-        {
-            if (comboBox2.SelectedItem != null)
-            {
-                MainWindow.vuosi.EiToistuvaTulo((Tulo)comboBox2.SelectedItem, MainWindow.vuosi.Kuukaudet[MainWindow.vuosi.Kuukaudet.IndexOf(MainWindow.vuosi.HaeKuukausi(kuukausi.Nimi))]);
-            }
         }
 
         private void poistaMeno(object sender, RoutedEventArgs e)
         {
             var m = MessageBox.Show("Poista meno?", "Poista meno", MessageBoxButton.YesNo, MessageBoxImage.Question);
+
             if (m == MessageBoxResult.Yes)
             {
                 if ((comboBox.SelectedItem as Meno).Toistuva)
                 {
-                    MainWindow.vuosi.EiToistuvaMeno((Meno)comboBox.SelectedItem, MainWindow.vuosi.Kuukaudet[MainWindow.vuosi.Kuukaudet.IndexOf(MainWindow.vuosi.HaeKuukausi(kuukausi.Nimi))]);
+                    MainWindow.vuosi.EiToistuvaMeno((Meno)comboBox.SelectedItem, MainWindow.vuosi.Kuukaudet[kkluku]);
                 }
 
                 kuukausi.Menot.Remove((Meno)comboBox.SelectedItem);
@@ -246,11 +239,12 @@ namespace Budjettilaskuri
         private void poistaTulo(object sender, RoutedEventArgs e)
         {
             var m = MessageBox.Show("Poista tulo?", "Poista tulo", MessageBoxButton.YesNo, MessageBoxImage.Question);
+
             if (m == MessageBoxResult.Yes)
             {
                 if ((comboBox2.SelectedItem as Tulo).Toistuva)
                 {
-                    MainWindow.vuosi.EiToistuvaTulo((Tulo)comboBox2.SelectedItem, MainWindow.vuosi.Kuukaudet[MainWindow.vuosi.Kuukaudet.IndexOf(MainWindow.vuosi.HaeKuukausi(kuukausi.Nimi))]);
+                    MainWindow.vuosi.EiToistuvaTulo((Tulo)comboBox2.SelectedItem, MainWindow.vuosi.Kuukaudet[kkluku]);
                 }
 
                 kuukausi.Tulot.Remove((Tulo)comboBox2.SelectedItem);
@@ -270,14 +264,16 @@ namespace Budjettilaskuri
 
         private void laskeVedenkulutus_Click(object sender, RoutedEventArgs e)
         {
-            int kkluku = MainWindow.vuosi.Kuukaudet.IndexOf(MainWindow.vuosi.HaeKuukausi(kuukausi.Nimi));
             Vedenkulutus window = new Vedenkulutus(MainWindow.vuosi.Kuukaudet[kkluku]);
+
             if (kkluku > 0)
             {
                 window = new Vedenkulutus(MainWindow.vuosi.Kuukaudet[kkluku], MainWindow.vuosi.Kuukaudet[kkluku - 1]);
             }
+
             window.ShowDialog();
             kuukausi.Vedenkulutus = window.VesiKKKMäärä;
+
             if (kkluku > 0)
             {
                 MainWindow.vuosi.Kuukaudet[kkluku - 1].Vedenkulutus = window.EdellKKKMäärä;
@@ -288,6 +284,30 @@ namespace Budjettilaskuri
         {
             Sähkönkulutus window = new Sähkönkulutus();
             window.ShowDialog();
+        }
+
+        private void toistuvaCheck_Click(object sender, RoutedEventArgs e)
+        {
+            if ((sender as CheckBox).IsChecked == true)
+            {
+                MainWindow.vuosi.ToistuvaMeno((Meno)comboBox.SelectedItem);
+            }
+            else if (comboBox.SelectedItem != null)
+            {
+                MainWindow.vuosi.EiToistuvaMeno((Meno)comboBox.SelectedItem, MainWindow.vuosi.Kuukaudet[kkluku]);
+            }
+        }
+
+        private void toistuvaCheck2_Click(object sender, RoutedEventArgs e)
+        {
+            if ((sender as CheckBox).IsChecked == true)
+            {
+                MainWindow.vuosi.ToistuvaTulo((Tulo)comboBox2.SelectedItem);
+            }
+            else if (comboBox2.SelectedItem != null)
+            {
+                MainWindow.vuosi.EiToistuvaTulo((Tulo)comboBox2.SelectedItem, MainWindow.vuosi.Kuukaudet[kkluku]);
+            }
         }
     }
 }
