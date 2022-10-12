@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Budjettilaskuri"
         mc:Ignorable="d"
-        Title="Sähkönkulutus" Height="500" Width="450" ResizeMode="CanMinimize">
+        Title="Sähkön hinta" Height="500" Width="450" ResizeMode="CanMinimize" ShowInTaskbar="False">
     <Grid>
         <Grid.Background>
             <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
@@ -18,7 +18,7 @@
         <TextBox x:Name="SyötäKäyttöM" HorizontalAlignment="Left" Margin="290,290,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="70" FontSize="20" TextChanged="SyötäKäyttöM_TextChanged"/>
         <Label Content="Hinta:" HorizontalAlignment="Left" Margin="124,393,0,0" VerticalAlignment="Top" FontSize="20" Width="119"/>
         <TextBlock x:Name="MaksutYht" HorizontalAlignment="Left" Margin="290,398,0,0" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="20" Width="70" Background="White"/>
-        <TextBlock x:Name="budjettilaskuri" HorizontalAlignment="Center" TextWrapping="Wrap" VerticalAlignment="Top" Width="400" RenderTransformOrigin="0.5,0.5" Height="43" Background="#FF00B3FF" FontSize="36" TextAlignment="Center" LineHeight="NaN" FontFamily="Eras ITC" Foreground="White"><Run Text="SÄHKÖ"/><Run Language="fi-fi" Text="NKULUTUS"/></TextBlock>
+        <TextBlock x:Name="budjettilaskuri" HorizontalAlignment="Center" TextWrapping="Wrap" VerticalAlignment="Top" Width="400" RenderTransformOrigin="0.5,0.5" Height="43" Background="#FF00B3FF" FontSize="36" TextAlignment="Center" LineHeight="NaN" FontFamily="Eras ITC" Foreground="White" Text="SÄHKÖN HINTA"/>
         <TextBox  x:Name="Kmaksu"  HorizontalAlignment="Left" Margin="46,287,0,0" TextWrapping="Wrap" Text="Käyttömaksu" VerticalAlignment="Top" Width="206" Height="34" FontSize="20" Background="#FF8FDEFF" TextAlignment="Center" Foreground="Black" BorderBrush="Black"/>
         <TextBox  x:Name="Smaksu"  HorizontalAlignment="Left" Margin="46,187,0,0" TextWrapping="Wrap" Text="Siirtomaksu" VerticalAlignment="Top" Width="206" Height="34" FontSize="20" Background="#FF8FDEFF" TextAlignment="Center" BorderBrush="Black"/>
         <TextBox  x:Name="Smaksu_Copy"  HorizontalAlignment="Left" Margin="46,95,0,0" TextWrapping="Wrap" Text="Sähkönkulutus" VerticalAlignment="Top" Width="206" Height="34" FontSize="20" Background="#FF8FDEFF" TextAlignment="Center" BorderBrush="Black"/>

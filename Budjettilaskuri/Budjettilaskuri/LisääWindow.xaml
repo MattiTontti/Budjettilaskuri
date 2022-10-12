@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Budjettilaskuri"
         mc:Ignorable="d"
-        Title="LisääWindow" Height="250" Width="400" Closing="Window_Closing" ResizeMode="CanMinimize">
+        Title="LisääWindow" Height="250" Width="400" Closing="Window_Closing" ResizeMode="CanMinimize" ShowInTaskbar="False">
     <Grid>
         <Grid.Background>
             <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">

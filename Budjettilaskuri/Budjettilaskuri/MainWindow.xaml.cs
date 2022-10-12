@@ -28,6 +28,7 @@ namespace Budjettilaskuri
         public MainWindow()
         {
             InitializeComponent();
+
             if (File.Exists("vuosi.json"))
             {
                 vuosi = JsonSerializer.Deserialize<Vuosi>(File.ReadAllText("vuosi.json"));
