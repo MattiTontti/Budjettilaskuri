@@ -23,24 +23,24 @@
         </Rectangle>
         <ComboBox x:Name="comboBox" HorizontalAlignment="Left" Margin="283,184,0,0" VerticalAlignment="Top" Width="120" SelectionChanged="comboBox_SelectionChanged" SelectedIndex="0" />
         <TextBox x:Name="menotBox" HorizontalAlignment="Left" Margin="416,187,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="57" TextChanged="menotBox_TextChanged"/>
-        <Label Content="€" HorizontalAlignment="Left" Margin="473,178,0,0" VerticalAlignment="Top" Foreground="#FF0F8811" BorderBrush="White" Height="36" Width="24" FontSize="18"/>
+        <Label Content="€" HorizontalAlignment="Left" Margin="473,178,0,0" VerticalAlignment="Top" Foreground="Black" BorderBrush="White" Height="36" Width="24" FontSize="18"/>
         <Label Content="Menot:" HorizontalAlignment="Left" Margin="283,158,0,0" VerticalAlignment="Top"/>
         <ComboBox x:Name="comboBox2" HorizontalAlignment="Left" Margin="283,249,0,0" VerticalAlignment="Top" Width="120" SelectionChanged="comboBox2_SelectionChanged" SelectedIndex="0"/>
         <TextBox x:Name="tulotBox" HorizontalAlignment="Left" Margin="416,252,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="57" TextChanged="tulotBox_TextChanged"/>
-        <Label Content="€" HorizontalAlignment="Left" Margin="473,242,0,0" VerticalAlignment="Top" Foreground="#FF0F8811" FontSize="18"/>
+        <Label Content="€" HorizontalAlignment="Left" Margin="473,242,0,0" VerticalAlignment="Top" Foreground="Black" FontSize="18"/>
         <Label Content="Tulot:" HorizontalAlignment="Left" Margin="283,223,0,0" VerticalAlignment="Top"/>
         <Button x:Name="lisääMeno" Content="Lisää meno" HorizontalAlignment="Left" Margin="518,189,0,0" VerticalAlignment="Top" Click="lisääMeno_Click" Width="66" Foreground="Black"/>
         <Button x:Name="lisääTulo" Content="Lisää tulo" HorizontalAlignment="Left" Margin="518,251,0,0" VerticalAlignment="Top" Click="lisääTulo_Click" Width="66" Foreground="Black"/>
         <CheckBox x:Name="toistuvaCheck" Content="Toistuva" HorizontalAlignment="Left" Margin="416,214,0,0" VerticalAlignment="Top" Checked="toistuvaCheck_Checked" Unchecked="toistuvaCheck_Unchecked"/>
         <CheckBox x:Name="toistuvaCheck2" Content="Toistuva" HorizontalAlignment="Left" Margin="416,274,0,0" VerticalAlignment="Top" Checked="toistuvaCheck2_Checked" Unchecked="toistuvaCheck2_Unchecked"/>
-        <Button x:Name="poistaMenoButton" Content="Poista meno" HorizontalAlignment="Left" Margin="220,186,0,0" VerticalAlignment="Top" Foreground="White" FontSize="10" Click="poistaMeno" Background="#FFFF0021"/>
-        <Button x:Name="poistaTuloButton" Content="Poista tulo" HorizontalAlignment="Left" Margin="220,252,0,0" VerticalAlignment="Top" Foreground="White" FontSize="10" Click="poistaTulo" Background="#FFFF0021" Width="58"/>
+        <Button x:Name="poistaMenoButton" Content="Poista meno" HorizontalAlignment="Left" Margin="220,186,0,0" VerticalAlignment="Top" Foreground="White" FontSize="10" Click="poistaMeno" Background="#FFCC001A"/>
+        <Button x:Name="poistaTuloButton" Content="Poista tulo" HorizontalAlignment="Left" Margin="220,252,0,0" VerticalAlignment="Top" Foreground="White" FontSize="10" Click="poistaTulo" Background="#FFCC001A" Width="58"/>
         <Label Content="Koko menot:" HorizontalAlignment="Left" Margin="304,132,0,0" VerticalAlignment="Top" Background="#FF8FDEFF"/>
         <Label Content="Koko tulot:" HorizontalAlignment="Left" Margin="303,294,0,0" VerticalAlignment="Top" Background="#FF8FDEFF" Width="76"/>
         <TextBlock x:Name="kokoMenot" HorizontalAlignment="Left" Margin="390,137,0,0" TextWrapping="Wrap" VerticalAlignment="Top"/>
         <TextBlock x:Name="kokoTulot" HorizontalAlignment="Left" Margin="388,299,0,0" TextWrapping="Wrap" VerticalAlignment="Top"/>
         <TextBlock x:Name="Kuukausittaisetkjm" HorizontalAlignment="Center" Margin="0,11,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="778" RenderTransformOrigin="0.5,0.5" Height="42" Background="#FF00B3FF" FontSize="36" TextAlignment="Center" LineHeight="NaN" FontFamily="Eras ITC" Foreground="White"><Run Language="fi-fi" Text="KUUKAUSITTAISET KULUT JA MENOT"/></TextBlock>
-        <Button x:Name="laskeVedenkulutus" Content="Laske vedenkulutus" HorizontalAlignment="Left" Margin="99,185,0,0" VerticalAlignment="Top" Width="109" Foreground="Black" Click="laskeVedenkulutus_Click" Visibility="Hidden"/>
-        <Button x:Name="laskeSähkönhinta" Content="Laske sähkön hinta" HorizontalAlignment="Left" Margin="99,185,0,0" VerticalAlignment="Top" Width="109" Foreground="Black" Visibility="Hidden" Click="laskeSähkönhinta_Click"/>
+        <Button x:Name="laskeVedenkulutus" Content="Laske vedenkulutus" HorizontalAlignment="Left" Margin="120,185,0,0" VerticalAlignment="Top" Width="109" Foreground="Black" Click="laskeVedenkulutus_Click" Visibility="Hidden"/>
+        <Button x:Name="laskeSähkönhinta" Content="Laske sähkön hinta" HorizontalAlignment="Left" Margin="120, 185,0,0" VerticalAlignment="Top" Width="109" Foreground="Black" Visibility="Hidden" Click="laskeSähkönhinta_Click"/>
     </Grid>
 </Window>

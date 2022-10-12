@@ -28,6 +28,16 @@ namespace Budjettilaskuri
             InitializeComponent();
             kk = kuukausi;
             i = numero;
+
+            if (i == 0)
+            {
+                Title = "Lisää meno";
+            }
+            else
+            {
+                Title = "Lisää tulo";
+            }
+            otsikkoText.Text = Title.ToUpper();
         }
         public bool bcheck = false;
         private void Window_Closing(object sender, System.ComponentModel.CancelEventArgs e)
