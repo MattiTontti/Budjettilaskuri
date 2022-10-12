@@ -270,9 +270,18 @@ namespace Budjettilaskuri
 
         private void laskeVedenkulutus_Click(object sender, RoutedEventArgs e)
         {
-            Vedenkulutus window = new Vedenkulutus(MainWindow.vuosi.Kuukaudet[MainWindow.vuosi.Kuukaudet.IndexOf(MainWindow.vuosi.HaeKuukausi(kuukausi.Nimi)) - 1]);
+            int kkluku = MainWindow.vuosi.Kuukaudet.IndexOf(MainWindow.vuosi.HaeKuukausi(kuukausi.Nimi));
+            Vedenkulutus window = new Vedenkulutus(MainWindow.vuosi.Kuukaudet[kkluku]);
+            if (kkluku > 0)
+            {
+                window = new Vedenkulutus(MainWindow.vuosi.Kuukaudet[kkluku], MainWindow.vuosi.Kuukaudet[kkluku - 1]);
+            }
             window.ShowDialog();
             kuukausi.Vedenkulutus = window.VesiKKKMäärä;
+            if (kkluku > 0)
+            {
+                MainWindow.vuosi.Kuukaudet[kkluku - 1].Vedenkulutus = window.EdellKKKMäärä;
+            }
         }
 
         private void laskeSähkönhinta_Click(object sender, RoutedEventArgs e)

@@ -20,15 +20,23 @@ namespace Budjettilaskuri
     public partial class Vedenkulutus : Window
     {
         public double VesiKKKMäärä;
-        double EdellKKKMäärä;
+        public double EdellKKKMäärä;
+        Kuukausi kk;
+        public Vedenkulutus(Kuukausi kuukausi, Kuukausi edelkuukausi)
+        {
+            InitializeComponent();
+
+            VesiKKKMäärä = kuukausi.Vedenkulutus;
+            VesiKKK.Text = VesiKKKMäärä.ToString();
+            EdellKKKMäärä = edelkuukausi.Vedenkulutus;
+            EdellKKK.Text = EdellKKKMäärä.ToString();
+        }
         public Vedenkulutus(Kuukausi kuukausi)
         {
             InitializeComponent();
-           
-            EdellKKKMäärä = kuukausi.Vedenkulutus;
-            EdellKKK.Text = EdellKKKMäärä.ToString();
-            
-            
+
+            VesiKKKMäärä = kuukausi.Vedenkulutus;
+            VesiKKK.Text = VesiKKKMäärä.ToString();
         }
 
         private void VesiKKK_TextChanged(object sender, TextChangedEventArgs e)
@@ -37,9 +45,19 @@ namespace Budjettilaskuri
             if (double.TryParse(VesiKKK.Text, out määrä))
             {
                 VesiKKKMäärä = määrä;
-                KuukaudenKulutus.Text = (EdellKKKMäärä - VesiKKKMäärä).ToString();
+                KuukaudenKulutus.Text = (VesiKKKMäärä - EdellKKKMäärä).ToString();
             }
 
+        }
+
+        private void EdellKKK_TextChanged(object sender, TextChangedEventArgs e)
+        {
+            double määrä;
+            if (double.TryParse(EdellKKK.Text, out määrä))
+            {
+                EdellKKKMäärä = määrä;
+                KuukaudenKulutus.Text = (VesiKKKMäärä - EdellKKKMäärä).ToString();
+            }
         }
     }
 }
