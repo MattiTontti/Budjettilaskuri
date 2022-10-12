@@ -27,7 +27,7 @@ namespace Budjettilaskuri
             kuukausi = kk;
             InitializeComponent();
             Title = kk.Nimi;
-            kuukausiNimi.Text = kk.Nimi;
+            Kuukausittaisetkjm.Text = $"{kk.Nimi.ToUpper()}N KULUT JA MENOT";
             comboBox.ItemsSource = kuukausi.Menot;
             comboBox2.ItemsSource = kuukausi.Tulot;
             kokoMenot.Text = kuukausi.KokoMenot().ToString() + " €";
@@ -74,7 +74,16 @@ namespace Budjettilaskuri
                 {
                     poistaMenoButton.Visibility = Visibility.Hidden;
                 }
+                if ((comboBox.SelectedItem as Meno).Nimi == "Vedenkulutus")
+                {
+                    laskeVedenkulutus.Visibility = Visibility.Visible;
+                }
+                else
+                {
+                    laskeVedenkulutus.Visibility = Visibility.Hidden;
+                }
             }
+
         }
 
         private void comboBox2_SelectionChanged(object sender, SelectionChangedEventArgs e)
@@ -235,6 +244,13 @@ namespace Budjettilaskuri
                     tulotBox.Text = "";
                 }
             }
+        }
+
+        private void laskeVedenkulutus_Click(object sender, RoutedEventArgs e)
+        {
+            Vedenkulutus window = new Vedenkulutus(MainWindow.vuosi.Kuukaudet[MainWindow.vuosi.Kuukaudet.IndexOf(MainWindow.vuosi.HaeKuukausi(kuukausi.Nimi)) - 1]);
+            window.ShowDialog();
+            kuukausi.Vedenkulutus = window.VesiKKKMäärä;
         }
     }
 }

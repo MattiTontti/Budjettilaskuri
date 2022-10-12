@@ -19,15 +19,27 @@ namespace Budjettilaskuri
     /// </summary>
     public partial class Vedenkulutus : Window
     {
-        public Vedenkulutus()
+        public double VesiKKKMäärä;
+        double EdellKKKMäärä;
+        public Vedenkulutus(Kuukausi kuukausi)
         {
             InitializeComponent();
            
-            double VesiKKK = 0;
-            double EdellKKK = 0;
-
-            VesiKKL = VesiKKK - EdellKKK;
+            EdellKKKMäärä = kuukausi.Vedenkulutus;
+            EdellKKK.Text = EdellKKKMäärä.ToString();
             
+            
+        }
+
+        private void VesiKKK_TextChanged(object sender, TextChangedEventArgs e)
+        {
+            double määrä;
+            if (double.TryParse(VesiKKK.Text, out määrä))
+            {
+                VesiKKKMäärä = määrä;
+                KuukaudenKulutus.Text = (EdellKKKMäärä - VesiKKKMäärä).ToString();
+            }
+
         }
     }
 }
