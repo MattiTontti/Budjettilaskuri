@@ -19,6 +19,9 @@ namespace Budjettilaskuri
     /// </summary>
     public partial class Sähkönkulutus : Window
     {
+        double KulutusMäärä = 0;
+        double SiirtoMäärä = 0;
+        double KäyttöMäärä = 0;
         public Sähkönkulutus()
         {
             InitializeComponent();
@@ -26,12 +29,32 @@ namespace Budjettilaskuri
 
         private void Skulutus_TextChanged(object sender, TextChangedEventArgs e)
         {
-           
+            double määrä;
+            if (double.TryParse(kWh.Text, out määrä))
+            {
+                KulutusMäärä = määrä;
+                MaksutYht.Text = Math.Round((SiirtoMäärä + KäyttöMäärä) / KulutusMäärä, 2).ToString();
+            }
         }
 
         private void SyötäKäyttöM_TextChanged(object sender, TextChangedEventArgs e)
         {
+            double määrä;
+            if (double.TryParse(SyötäKäyttöM.Text, out määrä))
+            {
+                KäyttöMäärä = määrä;
+                MaksutYht.Text = Math.Round((SiirtoMäärä + KäyttöMäärä) / KulutusMäärä, 2).ToString();            
+            }
+        }
 
+        private void SyötäSiirtoM_TextChanged(object sender, TextChangedEventArgs e)
+        {
+            double määrä;
+            if (double.TryParse(SyötäSiirtoM.Text, out määrä))
+            {
+                SiirtoMäärä = määrä;
+                MaksutYht.Text = Math.Round((SiirtoMäärä + KäyttöMäärä) / KulutusMäärä, 2).ToString();            
+            }
         }
     }
 }

@@ -74,6 +74,7 @@ namespace Budjettilaskuri
                 {
                     poistaMenoButton.Visibility = Visibility.Hidden;
                 }
+
                 if ((comboBox.SelectedItem as Meno).Nimi == "Vesi")
                 {
                     laskeVedenkulutus.Visibility = Visibility.Visible;
@@ -81,6 +82,15 @@ namespace Budjettilaskuri
                 else
                 {
                     laskeVedenkulutus.Visibility = Visibility.Hidden;
+                }
+
+                if ((comboBox.SelectedItem as Meno).Nimi == "Sähkö")
+                {
+                    laskeSähkönhinta.Visibility = Visibility.Visible;
+                }
+                else
+                {
+                    laskeSähkönhinta.Visibility = Visibility.Hidden;
                 }
             }
 
@@ -119,6 +129,12 @@ namespace Budjettilaskuri
             {
                 kuukausi.MuokkaaMeno(comboBox.SelectedItem.ToString(), määrä);
             }
+
+            if (menotBox.Text == "" && comboBox.SelectedItem != null)
+            {
+                kuukausi.MuokkaaMeno(comboBox.SelectedItem.ToString(), 0);
+            }
+
             if (toistuvaCheck.IsChecked == true)
             {
                 MainWindow.vuosi.ToistuvaMeno((Meno)comboBox.SelectedItem);
@@ -169,6 +185,12 @@ namespace Budjettilaskuri
             {
                 kuukausi.MuokkaaTulo(comboBox2.SelectedItem.ToString(), määrä);
             }
+
+            if (tulotBox.Text == "" && comboBox2.SelectedItem != null)
+            {
+                kuukausi.MuokkaaTulo(comboBox2.SelectedItem.ToString(), 0);
+            }
+
             if (toistuvaCheck2.IsChecked == true)
             {
                 MainWindow.vuosi.ToistuvaTulo((Tulo)comboBox2.SelectedItem);
@@ -251,6 +273,12 @@ namespace Budjettilaskuri
             Vedenkulutus window = new Vedenkulutus(MainWindow.vuosi.Kuukaudet[MainWindow.vuosi.Kuukaudet.IndexOf(MainWindow.vuosi.HaeKuukausi(kuukausi.Nimi)) - 1]);
             window.ShowDialog();
             kuukausi.Vedenkulutus = window.VesiKKKMäärä;
+        }
+
+        private void laskeSähkönhinta_Click(object sender, RoutedEventArgs e)
+        {
+            Sähkönkulutus window = new Sähkönkulutus();
+            window.ShowDialog();
         }
     }
 }
