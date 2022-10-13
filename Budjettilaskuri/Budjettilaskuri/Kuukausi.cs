@@ -154,7 +154,14 @@ namespace Budjettilaskuri
             {
                 if (m.Nimi == meno)
                 {
-                    m.Määrä = määrä;
+                    if (määrä > 0)
+                    {
+                        m.Määrä = määrä;
+                    }
+                    else
+                    {
+                        m.Määrä = 0;
+                    }
                     break;
                 }
             }
@@ -171,7 +178,14 @@ namespace Budjettilaskuri
             {
                 if (t.Nimi == tulo)
                 {
-                    t.Määrä = määrä;
+                    if (määrä > 0)
+                    {
+                        t.Määrä = määrä;
+                    }
+                    else
+                    {
+                        t.Määrä = 0;
+                    }
                     break;
                 }
             }

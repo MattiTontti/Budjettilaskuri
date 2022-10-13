@@ -32,6 +32,7 @@ namespace Budjettilaskuri
             EdellKKKMäärä = edelkuukausi.Vedenkulutus;
             EdellKKK.Text = EdellKKKMäärä.ToString();
         }
+
         public Vedenkulutus(Kuukausi kuukausi)
         {
             InitializeComponent();
@@ -46,10 +47,24 @@ namespace Budjettilaskuri
 
             if (double.TryParse(VesiKKK.Text, out määrä))
             {
-                VesiKKKMäärä = määrä;
-                KuukaudenKulutus.Text = (VesiKKKMäärä - EdellKKKMäärä).ToString();
+                if (määrä > 0)
+                {
+                    VesiKKKMäärä = määrä;
+                }
+                else
+                {
+                    VesiKKKMäärä = 0;
+                }
+                
+                if (VesiKKKMäärä - EdellKKKMäärä > 0)
+                {
+                    KuukaudenKulutus.Text = (VesiKKKMäärä - EdellKKKMäärä).ToString();
+                }
+                else
+                {
+                    KuukaudenKulutus.Text = "0";
+                }
             }
-
         }
 
         private void EdellKKK_TextChanged(object sender, TextChangedEventArgs e)
@@ -58,8 +73,23 @@ namespace Budjettilaskuri
 
             if (double.TryParse(EdellKKK.Text, out määrä))
             {
-                EdellKKKMäärä = määrä;
-                KuukaudenKulutus.Text = (VesiKKKMäärä - EdellKKKMäärä).ToString();
+                if (määrä > 0)
+                {
+                    EdellKKKMäärä = määrä;
+                }
+                else
+                {
+                    EdellKKKMäärä = 0;
+                }
+
+                if (VesiKKKMäärä - EdellKKKMäärä > 0)
+                {
+                    KuukaudenKulutus.Text = (VesiKKKMäärä - EdellKKKMäärä).ToString();
+                }
+                else
+                {
+                    KuukaudenKulutus.Text = "0";
+                }
             }
         }
     }

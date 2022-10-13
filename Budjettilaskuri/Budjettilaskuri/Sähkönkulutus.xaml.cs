@@ -22,6 +22,7 @@ namespace Budjettilaskuri
         double KulutusMäärä = 0;
         double SiirtoMäärä = 0;
         double KäyttöMäärä = 0;
+
         public Sähkönkulutus()
         {
             InitializeComponent();
@@ -33,7 +34,10 @@ namespace Budjettilaskuri
 
             if (double.TryParse(kWh.Text, out määrä))
             {
-                KulutusMäärä = määrä;
+                if (määrä > 0)
+                {
+                    KulutusMäärä = määrä;
+                }
                 MaksutYht.Text = Math.Round((SiirtoMäärä + KäyttöMäärä) / KulutusMäärä, 2).ToString();
             }
         }
@@ -44,7 +48,15 @@ namespace Budjettilaskuri
 
             if (double.TryParse(SyötäKäyttöM.Text, out määrä))
             {
-                KäyttöMäärä = määrä;
+                if (määrä > 0)
+                {
+                    KäyttöMäärä = määrä;
+                }
+                else
+                {
+                    KäyttöMäärä = 0;
+                }
+
                 MaksutYht.Text = Math.Round((SiirtoMäärä + KäyttöMäärä) / KulutusMäärä, 2).ToString();            
             }
         }
@@ -55,7 +67,15 @@ namespace Budjettilaskuri
 
             if (double.TryParse(SyötäSiirtoM.Text, out määrä))
             {
-                SiirtoMäärä = määrä;
+                if (määrä > 0)
+                {
+                    SiirtoMäärä = määrä;
+                }
+                else
+                {
+                    SiirtoMäärä = 0;
+                }
+
                 MaksutYht.Text = Math.Round((SiirtoMäärä + KäyttöMäärä) / KulutusMäärä, 2).ToString();            
             }
         }

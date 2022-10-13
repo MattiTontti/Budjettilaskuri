@@ -18,7 +18,15 @@ namespace Budjettilaskuri
         public Raha(string nimi, double määrä)
         {
             Nimi = nimi;
-            Määrä = määrä;
+
+            if (määrä > 0)
+            {
+                Määrä = määrä;
+            }
+            else
+            {
+                Määrä = 0;
+            }
         }
 
         public override string? ToString()
