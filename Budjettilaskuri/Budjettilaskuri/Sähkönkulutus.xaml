@@ -16,8 +16,8 @@
         <TextBox x:Name="kWh" HorizontalAlignment="Left" Margin="290,98,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="70" FontSize="20" TextChanged="Skulutus_TextChanged"/>
         <TextBox x:Name="SyötäSiirtoM" HorizontalAlignment="Left" Margin="290,190,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="70" FontSize="20" TextChanged="SyötäSiirtoM_TextChanged"/>
         <TextBox x:Name="SyötäKäyttöM" HorizontalAlignment="Left" Margin="290,290,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="70" FontSize="20" TextChanged="SyötäKäyttöM_TextChanged"/>
-        <Label Content="Hinta:" HorizontalAlignment="Left" Margin="124,393,0,0" VerticalAlignment="Top" FontSize="20" Width="119"/>
-        <TextBlock x:Name="MaksutYht" HorizontalAlignment="Left" Margin="290,398,0,0" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="20" Width="70" Background="White"/>
+        <Label Content="Hinta:" HorizontalAlignment="Left" Margin="171,349,0,0" VerticalAlignment="Top" FontSize="20" Width="119"/>
+        <TextBlock x:Name="MaksutYht" HorizontalAlignment="Left" Margin="290,356,0,0" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="20" Width="70" Background="White"/>
         <TextBlock x:Name="budjettilaskuri" HorizontalAlignment="Center" TextWrapping="Wrap" VerticalAlignment="Top" Width="400" RenderTransformOrigin="0.5,0.5" Height="43" Background="#FF00B3FF" FontSize="36" TextAlignment="Center" LineHeight="NaN" FontFamily="Eras ITC" Foreground="White" Text="SÄHKÖN HINTA"/>
         <TextBox  x:Name="Kmaksu"  HorizontalAlignment="Left" Margin="46,287,0,0" TextWrapping="Wrap" Text="Käyttömaksu" VerticalAlignment="Top" Width="206" Height="34" FontSize="20" Background="#FF8FDEFF" TextAlignment="Center" Foreground="Black" BorderBrush="Black"/>
         <TextBox  x:Name="Smaksu"  HorizontalAlignment="Left" Margin="46,187,0,0" TextWrapping="Wrap" Text="Siirtomaksu" VerticalAlignment="Top" Width="206" Height="34" FontSize="20" Background="#FF8FDEFF" TextAlignment="Center" BorderBrush="Black"/>
@@ -25,6 +25,7 @@
         <Label Content="kWh" HorizontalAlignment="Left" Margin="360,98,0,0" VerticalAlignment="Top" Foreground="Black" Height="34" Width="40" RenderTransformOrigin="0.5,0.472" FontSize="14"/>
         <Label Content="€" HorizontalAlignment="Left" Margin="360,187,0,0" VerticalAlignment="Top" Foreground="Black" Height="45" Width="21" RenderTransformOrigin="0.38,0.609" FontSize="18"/>
         <Label Content="€" HorizontalAlignment="Left" Margin="360,287,0,0" VerticalAlignment="Top" Foreground="Black" Height="45" Width="21" RenderTransformOrigin="0.38,0.609" FontSize="18"/>
-        <Label Content="€ / kWh" HorizontalAlignment="Left" Margin="360,395,0,0" VerticalAlignment="Top" Foreground="Black" Height="45" Width="84" RenderTransformOrigin="0.429,0.423" FontSize="18"/>
+        <Label Content="€ / kWh" HorizontalAlignment="Left" Margin="360,353,0,0" VerticalAlignment="Top" Foreground="Black" Height="45" Width="84" RenderTransformOrigin="0.429,0.423" FontSize="18"/>
+        <Button x:Name="hyvaksyButton" Content="Hyväksy muutokset" HorizontalAlignment="Center" Margin="0,434,0,0" VerticalAlignment="Top" Width="200" Background="#FF5CDB5C" Foreground="Black" BorderBrush="Black" Click="hyvaksyButton_Click" Height="20"/>
     </Grid>
 </Window>

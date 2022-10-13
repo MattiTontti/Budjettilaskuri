@@ -22,6 +22,7 @@ namespace Budjettilaskuri
         double KulutusMäärä = 0;
         double SiirtoMäärä = 0;
         double KäyttöMäärä = 0;
+        public bool bcheck = false;
 
         public Sähkönkulutus()
         {
@@ -78,6 +79,12 @@ namespace Budjettilaskuri
 
                 MaksutYht.Text = Math.Round((SiirtoMäärä + KäyttöMäärä) / KulutusMäärä, 2).ToString();            
             }
+        }
+
+        private void hyvaksyButton_Click(object sender, RoutedEventArgs e)
+        {
+            bcheck = true;
+                Close();
         }
     }
 }

@@ -21,6 +21,7 @@ namespace Budjettilaskuri
     {
         public double VesiKKKMäärä;
         public double EdellKKKMäärä;
+        public bool bcheck = false;
         Kuukausi kk;
 
         public Vedenkulutus(Kuukausi kuukausi, Kuukausi edelkuukausi)
@@ -92,5 +93,12 @@ namespace Budjettilaskuri
                 }
             }
         }
+
+        private void hyvaksyButton_Click(object sender, RoutedEventArgs e)
+        {
+            bcheck = true;
+                Close();
+        }
+
     }
 }
