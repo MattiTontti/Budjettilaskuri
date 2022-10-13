@@ -23,13 +23,14 @@ namespace Budjettilaskuri
     {
         public static Kuukausi kuukausi = new Kuukausi();
         public bool addcheck = false;
-        int kkluku = MainWindow.vuosi.Kuukaudet.IndexOf(MainWindow.vuosi.HaeKuukausi(kuukausi.Nimi));
+        int kkluku;
 
         public KuukausiWindow(Kuukausi kk)
         {
             InitializeComponent();
 
             kuukausi = kk;
+            kkluku = MainWindow.vuosi.Kuukaudet.IndexOf(MainWindow.vuosi.HaeKuukausi(kuukausi.Nimi));
             Title = kk.Nimi;
             Kuukausittaisetkjm.Text = $"{kk.Nimi.ToUpper()}N KULUT JA MENOT";
 
