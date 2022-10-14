@@ -1,0 +1,12 @@
+Loppupalaveri 14.10.2022 klo 11.00
+Paikalla Valtteri Peltoluhta, Panu Käppi, Matti Tontti
+
+
+Matti on tehnyt Ok-napit kuukausi-ikkunaan ja veden- ja sähkönkulutusikkunoihin
+
+Panu on viimeitellyt vaatimusmäärittelyä
+
+Valtteri on lisännyt jatkokehitysideoita
+
+Sovellus toimii nyt hyvin, on valmis palautettavaksi
+
