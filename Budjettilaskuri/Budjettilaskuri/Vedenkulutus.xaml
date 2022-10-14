@@ -17,7 +17,7 @@
         <TextBox x:Name="EdellKKK" HorizontalAlignment="Left" Margin="600,200,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" FontSize="20" TextChanged="EdellKKK_TextChanged"/>
         <TextBlock x:Name="VesiKKL" HorizontalAlignment="Left" Margin="600,254,0,0" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="20" Width="120"/>
         <TextBox x:Name="Vesikk" HorizontalAlignment="Left" Margin="113,145,0,0" TextWrapping="Wrap" Text="Vedenkulutus kuukauden lopussa (mittarin lukema)" VerticalAlignment="Top" Width="458" Height="34" Background="#FF8FDEFF" FontSize="20" TextAlignment="Center" IsReadOnly="True"/>
-        <TextBox x:Name="EdellVesikk" HorizontalAlignment="Left" Margin="113,0,0,0" TextWrapping="Wrap" Text="Vedenkulutus edellisen kuukauden lopussa" VerticalAlignment="Center" Width="388" Height="34" Background="#FF8FDEFF" FontSize="20" TextAlignment="Center" IsReadOnly="True" TextChanged="EdellVesikk_TextChanged" />
+        <TextBox x:Name="EdellVesikk" HorizontalAlignment="Left" Margin="113,0,0,0" TextWrapping="Wrap" Text="Vedenkulutus edellisen kuukauden lopussa" VerticalAlignment="Center" Width="388" Height="34" Background="#FF8FDEFF" FontSize="20" TextAlignment="Center" IsReadOnly="True" />
         <TextBox HorizontalAlignment="Left" Margin="113,250,0,0" TextWrapping="Wrap" Text="Kuukauden kulutuslukema" VerticalAlignment="Top" Width="345" Height="34" Background="#FF8FDEFF" FontSize="20" TextAlignment="Center" IsReadOnly="True" />
         <TextBlock x:Name="Kuukausittaisetkjm" HorizontalAlignment="Center" TextWrapping="Wrap" VerticalAlignment="Top" Width="800" RenderTransformOrigin="0.5,0.5" Height="42" Background="#FF00B3FF" FontSize="36" TextAlignment="Center" LineHeight="NaN" FontFamily="Eras ITC" Foreground="White"><Run Language="fi-fi" Text="VEDENKULUTUS"/></TextBlock>
         <TextBox x:Name="KuukaudenKulutus" HorizontalAlignment="Left" Margin="600,255,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" FontSize="20" IsReadOnly="True"/>
@@ -27,6 +27,6 @@
         <Label Content="3" HorizontalAlignment="Left" Margin="732,200,0,0" VerticalAlignment="Top" FontSize="10"/>
         <Label Content="l" HorizontalAlignment="Left" Margin="725,256,0,0" VerticalAlignment="Top" FontSize="18" FontStyle="Italic"/>
         <Label Content="3" HorizontalAlignment="Left" Margin="732,254,0,0" VerticalAlignment="Top" FontSize="10"/>
-        <Button x:Name="hyvaksyButton" Content="Hyväksy muutokset" HorizontalAlignment="Center" Margin="0,385,0,0" VerticalAlignment="Top" Width="288" Background="#FF5CDB5C" Foreground="Black" BorderBrush="Black" Click="hyvaksyButton_Click" Height="20"/>
+        <Button x:Name="hyvaksyButton" Content="Ok" HorizontalAlignment="Center" Margin="0,348,0,0" VerticalAlignment="Top" Width="54" Background="#FF5CDB5C" Foreground="Black" BorderBrush="Black" Click="hyvaksyButton_Click" Height="40" FontSize="16"/>
     </Grid>
 </Window>

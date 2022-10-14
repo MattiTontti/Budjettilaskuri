@@ -22,7 +22,6 @@ namespace Budjettilaskuri
         double KulutusMäärä = 0;
         double SiirtoMäärä = 0;
         double KäyttöMäärä = 0;
-        public bool bcheck = false;
 
         public Sähkönkulutus()
         {
@@ -83,8 +82,7 @@ namespace Budjettilaskuri
 
         private void hyvaksyButton_Click(object sender, RoutedEventArgs e)
         {
-            bcheck = true;
-                Close();
+            Close();
         }
     }
 }

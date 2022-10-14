@@ -26,6 +26,6 @@
         <Label Content="€" HorizontalAlignment="Left" Margin="360,187,0,0" VerticalAlignment="Top" Foreground="Black" Height="45" Width="21" RenderTransformOrigin="0.38,0.609" FontSize="18"/>
         <Label Content="€" HorizontalAlignment="Left" Margin="360,287,0,0" VerticalAlignment="Top" Foreground="Black" Height="45" Width="21" RenderTransformOrigin="0.38,0.609" FontSize="18"/>
         <Label Content="€ / kWh" HorizontalAlignment="Left" Margin="360,353,0,0" VerticalAlignment="Top" Foreground="Black" Height="45" Width="84" RenderTransformOrigin="0.429,0.423" FontSize="18"/>
-        <Button x:Name="hyvaksyButton" Content="Hyväksy muutokset" HorizontalAlignment="Center" Margin="0,434,0,0" VerticalAlignment="Top" Width="200" Background="#FF5CDB5C" Foreground="Black" BorderBrush="Black" Click="hyvaksyButton_Click" Height="20"/>
+        <Button x:Name="hyvaksyButton" Content="Ok" HorizontalAlignment="Center" Margin="0,407,0,0" VerticalAlignment="Top" Width="54" Background="#FF5CDB5C" Foreground="Black" BorderBrush="Black" Click="hyvaksyButton_Click" Height="40" FontSize="16"/>
     </Grid>
 </Window>

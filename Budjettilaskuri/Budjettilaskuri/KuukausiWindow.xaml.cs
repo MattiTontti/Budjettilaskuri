@@ -22,7 +22,6 @@ namespace Budjettilaskuri
     public partial class KuukausiWindow : Window
     {
         public static Kuukausi kuukausi = new Kuukausi();
-        public bool bcheck = false;
         public bool addcheck = false;
         int kkluku;
 
@@ -319,7 +318,6 @@ namespace Budjettilaskuri
 
         private void hyvaksyButton_Click(object sender, RoutedEventArgs e)
         {
-            bcheck = true;
             Close();
         }
     }
